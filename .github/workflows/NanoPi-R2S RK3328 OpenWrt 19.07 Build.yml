@@ -83,7 +83,7 @@ jobs:
         if: always()
         run: |
           cd friendlywrt-rk3328/friendlywrt
-          make download -j8
+          make download -j1
           find dl -size -1024c -exec ls -l {} \;
           find dl -size -1024c -exec rm -f {} \;
 

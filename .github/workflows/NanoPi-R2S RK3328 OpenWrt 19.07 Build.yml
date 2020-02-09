@@ -37,17 +37,15 @@ jobs:
         run: |
           mkdir friendlywrt-rk3328
           cd friendlywrt-rk3328
-          repo init -u https://github.com/friendlyarm/friendlywrt_manifests -b master -m rk3328.xml --repo-url=https://github.com/friendlyarm/repo  --no-clone-bundle
+          repo init -u https://github.com/friendlyarm/friendlywrt_manifests -b master -m rk3328.xml --repo-url=https://github.com/friendlyarm/repo --no-clone-bundle
 
       - name: Merge UpStearm OpenWrt
         run: |
           cd friendlywrt-rk3328
           cd .repo/manifests
-          rm -f ./rk3328.xml
           wget https://raw.githubusercontent.com/soffchen/NanoPi-R2S-Build-By-Actions/master/source_xml/rk3328_19.07.xml
-          cp rk3328_19.07.xml rk3328.xml
-          rm -rf ./rk3328_19.07.xml
-          repo sync -c  --no-clone-bundle
+          mv rk3328_19.07.xml rk3328.xml
+          repo sync -c --no-clone-bundle
 
       - name: Merge LEDE
         run: |

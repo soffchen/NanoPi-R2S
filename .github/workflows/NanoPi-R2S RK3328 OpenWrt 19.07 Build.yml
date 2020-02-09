@@ -58,6 +58,11 @@ jobs:
           sed -i 's/https:\/\/git.openwrt.org\/project\/luci.git^039ef1f4deba725d3591b159bbc9569885d68131/https:\/\/github.com\/coolsnowwolf\/luci/' feeds.conf.default
           sed -i 's/https:\/\/git.openwrt.org\/feed\/packages.git^00803ffc91e80b16e9c1603ff32106d42e255923/https:\/\/github.com\/coolsnowwolf\/packages/' feeds.conf.default
 
+      - name: Luci for Clash
+        run: |
+          cd friendlywrt-h5/friendlywrt/package
+          git clone https://github.com/frainzy1477/luci-app-clash
+
       - name: Update Target.mk
         run: |
           cd friendlywrt-rk3328/friendlywrt/include

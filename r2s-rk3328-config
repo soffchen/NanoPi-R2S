@@ -4,7 +4,8 @@
 #
 CONFIG_MODULES=y
 CONFIG_HAVE_DOT_CONFIG=y
-CONFIG_TARGET_sunxi=y
+# CONFIG_TARGET_sunxi is not set
+# CONFIG_TARGET_allwinner_h5 is not set
 # CONFIG_TARGET_apm821xx is not set
 # CONFIG_TARGET_ath25 is not set
 # CONFIG_TARGET_ar71xx is not set
@@ -19,6 +20,7 @@ CONFIG_TARGET_sunxi=y
 # CONFIG_TARGET_mpc85xx is not set
 # CONFIG_TARGET_imx6 is not set
 # CONFIG_TARGET_mxs is not set
+# CONFIG_TARGET_ixp4xx is not set
 # CONFIG_TARGET_lantiq is not set
 # CONFIG_TARGET_malta is not set
 # CONFIG_TARGET_pistachio is not set
@@ -40,77 +42,213 @@ CONFIG_TARGET_sunxi=y
 # CONFIG_TARGET_samsung is not set
 # CONFIG_TARGET_arc770 is not set
 # CONFIG_TARGET_archs38 is not set
+# CONFIG_TARGET_ar7 is not set
 # CONFIG_TARGET_omap is not set
 # CONFIG_TARGET_uml is not set
 # CONFIG_TARGET_zynq is not set
+CONFIG_TARGET_rockchip_rk3328=y
 # CONFIG_TARGET_rockchip_rk3399 is not set
 # CONFIG_TARGET_x86 is not set
-# CONFIG_TARGET_sunxi_cortexa8 is not set
-# CONFIG_TARGET_sunxi_cortexa7 is not set
-CONFIG_TARGET_sunxi_cortexa53=y
+# CONFIG_TARGET_ath79_generic is not set
+# CONFIG_TARGET_ath79_nand is not set
+# CONFIG_TARGET_ath79_tiny is not set
 # CONFIG_TARGET_MULTI_PROFILE is not set
-# CONFIG_TARGET_sunxi_cortexa53_Default is not set
-CONFIG_TARGET_sunxi_cortexa53_DEVICE_sun50i-h5-nanopi-neo-plus2=y
-# CONFIG_TARGET_sunxi_cortexa53_DEVICE_sun50i-h5-nanopi-neo2 is not set
-# CONFIG_TARGET_sunxi_cortexa53_DEVICE_sun50i-a64-pine64-plus is not set
-# CONFIG_TARGET_sunxi_cortexa53_DEVICE_sun50i-a64-sopine-baseboard is not set
-# CONFIG_TARGET_sunxi_cortexa53_DEVICE_sun50i-h5-orangepi-pc2 is not set
-# CONFIG_TARGET_sunxi_cortexa53_DEVICE_sun50i-h5-orangepi-zero-plus is not set
-CONFIG_HAS_SUBTARGETS=y
-CONFIG_HAS_DEVICES=y
-CONFIG_TARGET_BOARD="sunxi"
-CONFIG_TARGET_SUBTARGET="cortexa53"
-CONFIG_TARGET_PROFILE="DEVICE_sun50i-h5-nanopi-neo-plus2"
+# CONFIG_TARGET_ath79_generic_Default is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_8dev_carambola2 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_alfa-network_ap121f is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_avm_fritz4020 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_avm_fritz300e is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_adtran_bsap1800-v2 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_adtran_bsap1840 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_aruba_ap-105 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_buffalo_bhr-4grv is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_buffalo_bhr-4grv2 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_buffalo_wzr-hp-ag300h is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_buffalo_wzr-hp-g302h-a1a0 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_buffalo_wzr-hp-g450h is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_comfast_cf-e110n-v2 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_comfast_cf-e120a-v3 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_comfast_cf-e313ac is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_comfast_cf-e314n-v2 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_comfast_cf-e5 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_comfast_cf-wr650ac-v1 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_comfast_cf-wr650ac-v2 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_dlink_dir-825-b1 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_dlink_dir-825-c1 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_dlink_dir-835-a1 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_dlink_dir-842-c1 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_dlink_dir-842-c2 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_dlink_dir-842-c3 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_dlink_dir-859-a1 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_elecom_wrc-1750ghbk2-i is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_elecom_wrc-300ghbk2-i is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_embeddedwireless_dorin is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_engenius_ecb1750 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_engenius_epg5000 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_engenius_ews511ap is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_glinet_gl-ar150 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_glinet_gl-ar300m-lite is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_glinet_gl-ar300m16 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_glinet_gl-ar750 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_glinet_gl-x750 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_iodata_etg3-r is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_iodata_wn-ac1167dgr is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_iodata_wn-ac1600dgr is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_iodata_wn-ac1600dgr2 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_iodata_wn-ag300dgr is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_librerouter_librerouter-v1 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_nec_wg1200cr is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_nec_wg800hp is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_netgear_ex6400 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_netgear_ex7300 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_netgear_wndr3700 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_netgear_wndr3700v2 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_netgear_wndr3800 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_netgear_wndr3800ch is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_netgear_wnr2200-16m is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_netgear_wnr2200-8m is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_ocedo_koala is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_ocedo_raccoon is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_ocedo_ursus is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_openmesh_om5p-ac-v2 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_pisen_wmm003n is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_pisen_ts-d084 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_pisen_wmb001n is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_phicomm_k2t is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_pcs_cap324 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_pcs_cr3000 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_pcs_cr5000 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_qihoo_c301 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_rosinson_wr818 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_sitecom_wlr-7100 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_tplink_archer-c6-v2-us is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_tplink_archer-a7-v5 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_tplink_archer-c2-v3 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_tplink_archer-c25-v1 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_tplink_archer-c5-v1 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_tplink_archer-c58-v1 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_tplink_archer-c59-v1 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_tplink_archer-c59-v2 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_tplink_archer-c6-v2 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_tplink_archer-c60-v1 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_tplink_archer-c60-v2 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_tplink_archer-c7-v1 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_tplink_archer-c7-v2 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_tplink_archer-c7-v4 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_tplink_archer-c7-v5 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_tplink_archer-d50-v1 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_tplink_cpe210-v1 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_tplink_cpe210-v2 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_tplink_cpe210-v3 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_tplink_cpe220-v2 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_tplink_cpe220-v3 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_tplink_cpe510-v1 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_tplink_cpe510-v2 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_tplink_cpe510-v3 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_tplink_cpe610-v1 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_tplink_re350k-v1 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_tplink_re355-v1 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_tplink_re450-v1 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_tplink_re450-v2 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_tplink_tl-wdr3500-v1 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_tplink_tl-wdr3600-v1 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_tplink_tl-wdr4300-v1 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_tplink_tl-wdr4900-v2 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_tplink_tl-wr1043n-v5 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_tplink_tl-wr1043nd-v1 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_tplink_tl-wr1043nd-v2 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_tplink_tl-wr1043nd-v3 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_tplink_tl-wr1043nd-v4 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_tplink_tl-wr1045nd-v2 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_tplink_tl-wr2543-v1 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_tplink_tl-wr710n-v1 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_tplink_tl-wr810n-v1 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_tplink_tl-wr810n-v2 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_tplink_tl-wr842n-v3 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_tplink_tl-wr842n-v1 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_tplink_tl-wr842n-v2 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_tplink_wbs210-v2 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_tplink_wbs510-v1 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_tplink_wbs510-v2 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_trendnet_tew-823dru is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_ubnt_airrouter is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_ubnt_bullet-m is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_ubnt_bullet-m-xw is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_ubnt_lap-120 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_ubnt_nanobeam-ac is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_ubnt_nanostation-ac is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_ubnt_nanostation-ac-loco is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_ubnt_nanostation-m is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_ubnt_nanostation-m-xw is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_ubnt_rocket-m is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_ubnt_routerstation is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_ubnt_routerstation-pro is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_ubnt_unifi is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_ubnt_unifiac-lr is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_ubnt_unifiac-lite is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_ubnt_unifiac-mesh is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_ubnt_unifiac-mesh-pro is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_ubnt_unifiac-pro is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_ubnt_acb-isp is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_wd_mynet-n750 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_wd_mynet-wifi-rangeextender is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_winchannel_wb2000 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_xiaomi_mi-router-4q is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_yuncore_a770 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_yuncore_a782 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_yuncore_xd4200 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_zbtlink_zbt-wd323 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_devolo_dvl1200e is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_devolo_dvl1200i is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_devolo_dvl1750c is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_devolo_dvl1750e is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_devolo_dvl1750i is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_devolo_dvl1750x is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_etactica_eg200 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_jjplus_ja76pf2 is not set
+CONFIG_TARGET_rockchip_rk3328_Default=y
+CONFIG_TARGET_BOARD="rockchip-rk3328"
+CONFIG_TARGET_SUBTARGET="generic"
+CONFIG_TARGET_PROFILE="Default"
 CONFIG_TARGET_ARCH_PACKAGES="aarch64_cortex-a53"
 CONFIG_DEFAULT_TARGET_OPTIMIZATION="-Os -pipe -mcpu=cortex-a53"
 CONFIG_CPU_TYPE="cortex-a53"
 CONFIG_LINUX_4_14=y
 CONFIG_DEFAULT_base-files=y
-CONFIG_DEFAULT_brcmfmac-firmware-43430-sdio=y
 CONFIG_DEFAULT_busybox=y
-CONFIG_DEFAULT_default-settings=y
-CONFIG_DEFAULT_dnsmasq-full=y
+CONFIG_DEFAULT_dnsmasq=y
 CONFIG_DEFAULT_dropbear=y
-CONFIG_DEFAULT_e2fsprogs=y
 CONFIG_DEFAULT_firewall=y
 CONFIG_DEFAULT_fstools=y
 CONFIG_DEFAULT_ip6tables=y
-CONFIG_DEFAULT_iwinfo=y
-CONFIG_DEFAULT_kmod-brcmfmac=y
+CONFIG_DEFAULT_iptables=y
 CONFIG_DEFAULT_kmod-ipt-offload=y
-CONFIG_DEFAULT_kmod-leds-gpio=y
-CONFIG_DEFAULT_kmod-ledtrig-heartbeat=y
-CONFIG_DEFAULT_kmod-rtc-sunxi=y
 CONFIG_DEFAULT_libc=y
 CONFIG_DEFAULT_libgcc=y
 CONFIG_DEFAULT_logd=y
-CONFIG_DEFAULT_luciiptables=y
-CONFIG_DEFAULT_mkf2fs=y
 CONFIG_DEFAULT_mtd=y
 CONFIG_DEFAULT_netifd=y
 CONFIG_DEFAULT_odhcp6c=y
 CONFIG_DEFAULT_odhcpd-ipv6only=y
 CONFIG_DEFAULT_opkg=y
-CONFIG_DEFAULT_partx-utils=y
 CONFIG_DEFAULT_ppp=y
 CONFIG_DEFAULT_ppp-mod-pppoe=y
-CONFIG_DEFAULT_uboot-envtools=y
 CONFIG_DEFAULT_uci=y
 CONFIG_DEFAULT_uclient-fetch=y
 CONFIG_DEFAULT_urandom-seed=y
 CONFIG_DEFAULT_urngd=y
-CONFIG_DEFAULT_wpad-mini=y
 CONFIG_HAS_FPU=y
 CONFIG_AUDIO_SUPPORT=y
 CONFIG_GPIO_SUPPORT=y
+CONFIG_PCI_SUPPORT=y
+CONFIG_PCIE_SUPPORT=y
 CONFIG_USB_SUPPORT=y
 CONFIG_RTC_SUPPORT=y
 CONFIG_USES_DEVICETREE=y
-CONFIG_USES_SQUASHFS=y
-CONFIG_USES_EXT4=y
+CONFIG_USES_TARGZ=y
 CONFIG_ARCH_64BIT=y
+CONFIG_VIRTIO_SUPPORT=y
 CONFIG_aarch64=y
-CONFIG_arm_v7=y
 CONFIG_ARCH="aarch64"
 
 #
@@ -128,28 +266,20 @@ CONFIG_EXTERNAL_CPIO=""
 #
 # Root filesystem images
 #
-CONFIG_TARGET_ROOTFS_EXT4FS=y
-CONFIG_TARGET_EXT4_RESERVED_PCT=0
-CONFIG_TARGET_EXT4_BLOCKSIZE_4K=y
-# CONFIG_TARGET_EXT4_BLOCKSIZE_2K is not set
-# CONFIG_TARGET_EXT4_BLOCKSIZE_1K is not set
-CONFIG_TARGET_EXT4_BLOCKSIZE=4096
-# CONFIG_TARGET_EXT4_JOURNAL is not set
+# CONFIG_TARGET_ROOTFS_EXT4FS is not set
 CONFIG_TARGET_ROOTFS_SQUASHFS=y
 CONFIG_TARGET_SQUASHFS_BLOCK_SIZE=256
 CONFIG_TARGET_UBIFS_FREE_SPACE_FIXUP=y
 CONFIG_TARGET_UBIFS_JOURNAL_SIZE=""
-CONFIG_TARGET_IMAGES_GZIP=y
 
 #
 # Image Options
 #
-CONFIG_SUNXI_SD_BOOT_PARTSIZE=20
-CONFIG_TARGET_ROOTFS_PARTSIZE=256
 
 #
 # Global build settings
 #
+# CONFIG_JSON_ADD_IMAGE_INFO is not set
 # CONFIG_ALL_NONSHARED is not set
 # CONFIG_ALL_KMODS is not set
 # CONFIG_ALL is not set
@@ -160,7 +290,7 @@ CONFIG_SIGNATURE_CHECK=y
 #
 # General build options
 #
-CONFIG_DISPLAY_SUPPORT=y
+# CONFIG_DISPLAY_SUPPORT is not set
 # CONFIG_BUILD_PATENTED is not set
 # CONFIG_BUILD_NLS is not set
 CONFIG_SHADOW_PASSWORDS=y
@@ -188,9 +318,9 @@ CONFIG_KERNEL_DEBUG_KERNEL=y
 CONFIG_KERNEL_DEBUG_INFO=y
 # CONFIG_KERNEL_DYNAMIC_DEBUG is not set
 # CONFIG_KERNEL_KPROBES is not set
-# CONFIG_KERNEL_AIO is not set
-# CONFIG_KERNEL_FHANDLE is not set
-# CONFIG_KERNEL_FANOTIFY is not set
+CONFIG_KERNEL_AIO=y
+CONFIG_KERNEL_FHANDLE=y
+CONFIG_KERNEL_FANOTIFY=y
 # CONFIG_KERNEL_BLK_DEV_BSG is not set
 CONFIG_KERNEL_MAGIC_SYSRQ=y
 # CONFIG_KERNEL_DEBUG_PINCTRL is not set
@@ -206,11 +336,41 @@ CONFIG_KERNEL_PRINTK_TIME=y
 # CONFIG_USE_SPARSE is not set
 # CONFIG_KERNEL_DEVTMPFS is not set
 # CONFIG_KERNEL_KEYS is not set
-# CONFIG_KERNEL_CGROUPS is not set
-# CONFIG_KERNEL_NAMESPACES is not set
-# CONFIG_KERNEL_LXC_MISC is not set
-# CONFIG_KERNEL_SECCOMP_FILTER is not set
-# CONFIG_KERNEL_SECCOMP is not set
+CONFIG_KERNEL_CGROUPS=y
+# CONFIG_KERNEL_CGROUP_DEBUG is not set
+CONFIG_KERNEL_FREEZER=y
+CONFIG_KERNEL_CGROUP_FREEZER=y
+CONFIG_KERNEL_CGROUP_DEVICE=y
+CONFIG_KERNEL_CGROUP_PIDS=y
+CONFIG_KERNEL_CPUSETS=y
+# CONFIG_KERNEL_PROC_PID_CPUSET is not set
+CONFIG_KERNEL_CGROUP_CPUACCT=y
+CONFIG_KERNEL_RESOURCE_COUNTERS=y
+CONFIG_KERNEL_MM_OWNER=y
+CONFIG_KERNEL_MEMCG=y
+# CONFIG_KERNEL_MEMCG_SWAP is not set
+CONFIG_KERNEL_MEMCG_KMEM=y
+# CONFIG_KERNEL_CGROUP_PERF is not set
+CONFIG_KERNEL_CGROUP_SCHED=y
+CONFIG_KERNEL_FAIR_GROUP_SCHED=y
+# CONFIG_KERNEL_CFS_BANDWIDTH is not set
+CONFIG_KERNEL_RT_GROUP_SCHED=y
+CONFIG_KERNEL_BLK_CGROUP=y
+# CONFIG_KERNEL_CFQ_GROUP_IOSCHED is not set
+# CONFIG_KERNEL_BLK_DEV_THROTTLING is not set
+# CONFIG_KERNEL_DEBUG_BLK_CGROUP is not set
+CONFIG_KERNEL_NET_CLS_CGROUP=y
+CONFIG_KERNEL_NETPRIO_CGROUP=y
+CONFIG_KERNEL_NAMESPACES=y
+CONFIG_KERNEL_UTS_NS=y
+CONFIG_KERNEL_IPC_NS=y
+CONFIG_KERNEL_USER_NS=y
+CONFIG_KERNEL_PID_NS=y
+CONFIG_KERNEL_NET_NS=y
+CONFIG_KERNEL_DEVPTS_MULTIPLE_INSTANCES=y
+CONFIG_KERNEL_POSIX_MQUEUE=y
+CONFIG_KERNEL_SECCOMP_FILTER=y
+CONFIG_KERNEL_SECCOMP=y
 CONFIG_KERNEL_IP_MROUTE=y
 CONFIG_KERNEL_IPV6=y
 CONFIG_KERNEL_IPV6_MULTIPLE_TABLES=y
@@ -292,6 +452,7 @@ CONFIG_TARGET_ROOTFS_DIR=""
 # CONFIG_CCACHE is not set
 CONFIG_EXTERNAL_KERNEL_TREE=""
 CONFIG_KERNEL_GIT_CLONE_URI=""
+CONFIG_BUILD_LOG_DIR=""
 CONFIG_EXTRA_OPTIMIZATION="-fno-caller-saves -fno-plt"
 CONFIG_TARGET_OPTIMIZATION="-Os -pipe -mcpu=cortex-a53"
 # CONFIG_EXTRA_TARGET_ARCH is not set
@@ -306,8 +467,8 @@ CONFIG_USE_MUSL=y
 CONFIG_SSP_SUPPORT=y
 CONFIG_BINUTILS_VERSION_2_31_1=y
 CONFIG_BINUTILS_VERSION="2.31.1"
-# CONFIG_GCC_USE_EMBEDDED_PATH_REMAP is not set
-CONFIG_GCC_VERSION="7.5.0"
+CONFIG_GCC_VERSION="8.3.0"
+# CONFIG_GCC_USE_IREMAP is not set
 CONFIG_LIBC="musl"
 CONFIG_TARGET_SUFFIX="musl"
 # CONFIG_IB is not set

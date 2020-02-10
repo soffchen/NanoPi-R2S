@@ -67,7 +67,6 @@ jobs:
           gunzip clash-linux-armv8-v0.17.2.gz
           chmod +x clash-linux-armv8-v0.17.2
           mv clash-linux-armv8-v0.17.2 clash
-          wget https://github.com/Dreamacro/maxmind-geoip/releases/download/20200204/Country.mmdb
           mkdir -p friendlywrt-rk3328/friendlywrt/package/base-files/files/usr/share/clash
           cd friendlywrt-rk3328/friendlywrt/package/base-files/files/usr/share/clash
           echo 0.17.2 > core_version

@@ -28,6 +28,7 @@ jobs:
         run: |
           sudo apt-get update
           wget -O - https://raw.githubusercontent.com/friendlyarm/build-env-on-ubuntu-bionic/master/install.sh | bash
+          sudo rm -rf /usr/share/dotnet /usr/local/lib/android/sdk
 
       - name: Install Repo
         run: |

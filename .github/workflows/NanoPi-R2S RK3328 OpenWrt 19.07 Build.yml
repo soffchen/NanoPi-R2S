@@ -9,6 +9,10 @@ on:
   # release:
   #   types: [published]
 
+env:
+  SSH_ACTIONS: true
+  TZ: Asia/Shanghai
+
 jobs:
 
   build:

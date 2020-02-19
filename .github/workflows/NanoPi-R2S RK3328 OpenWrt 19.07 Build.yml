@@ -1,13 +1,9 @@
 name: NanoPi-R2S RK3328 OpenWrt 19.07 Build
 
 on:
-  #push:
-  #  branches:
-  #    - master
-  page_build:
-  release:
-    types:
-      - created
+  push:
+    branches:
+      - master
 
 jobs:
 

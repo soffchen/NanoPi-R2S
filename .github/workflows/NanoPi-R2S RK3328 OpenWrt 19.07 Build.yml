@@ -9,10 +9,6 @@ on:
   # release:
   #   types: [published]
 
-env:
-  SSH_ACTIONS: true
-  TZ: Asia/Shanghai
-
 jobs:
 
   build:
@@ -34,6 +30,9 @@ jobs:
           wget -O - https://raw.githubusercontent.com/friendlyarm/build-env-on-ubuntu-bionic/master/install.sh | bash
           sudo rm -rf /usr/share/dotnet /usr/local/lib/android/sdk
 
+      - name: Setup Debug Session
+        uses: P3TERX/debugger-action@master
+  
       - name: Install Repo
         run: |
           git clone https://github.com/friendlyarm/repo

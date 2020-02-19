@@ -1,13 +1,13 @@
 name: NanoPi-R2S RK3328 OpenWrt 19.07 Build
 
 on:
-  push:
-    branches:
-      - master
-  # schedule:
-  #   - cron: 0 20 * * *
-  # release:
-  #   types: [published]
+  #push:
+  #  branches:
+  #    - master
+  page_build:
+  release:
+    types:
+      - created
 
 jobs:
 
@@ -27,11 +27,14 @@ jobs:
           DEBIAN_FRONTEND: noninteractive
         run: |
           sudo apt-get update
-          wget -O - https://raw.githubusercontent.com/friendlyarm/build-env-on-ubuntu-bionic/master/install.sh | bash
           sudo rm -rf /usr/share/dotnet /usr/local/lib/android/sdk
+          docker image prune -a -f
+          sudo apt-get -y purge dotnet* ghc* google* llvm* mysql* php* zulu* firefox hhvm powershell
+          sudo apt-get -y autoremove --purge          
+          wget -O - https://raw.githubusercontent.com/friendlyarm/build-env-on-ubuntu-bionic/master/install.sh | bash
 
-      - name: Setup Debug Session
-        uses: P3TERX/debugger-action@master
+      #- name: Setup Debug Session
+      #  uses: P3TERX/debugger-action@master
   
       - name: Install Repo
         run: |

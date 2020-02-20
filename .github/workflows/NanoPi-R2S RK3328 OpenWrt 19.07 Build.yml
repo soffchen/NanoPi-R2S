@@ -57,6 +57,7 @@ jobs:
           git clone https://github.com/coolsnowwolf/lede
           cd friendlywrt
           cp -r ../lede/package/lean package/
+          cp -r ../lede/tools/upx tools/
           sed -i 's/https:\/\/git.openwrt.org\/project\/luci.git^039ef1f4deba725d3591b159bbc9569885d68131/https:\/\/github.com\/coolsnowwolf\/luci/' feeds.conf.default
           sed -i 's/https:\/\/git.openwrt.org\/feed\/packages.git^00803ffc91e80b16e9c1603ff32106d42e255923/https:\/\/github.com\/coolsnowwolf\/packages/' feeds.conf.default
 

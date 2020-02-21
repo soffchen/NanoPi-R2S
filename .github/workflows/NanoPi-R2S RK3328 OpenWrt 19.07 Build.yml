@@ -99,6 +99,13 @@ jobs:
           wget https://raw.githubusercontent.com/soffchen/NanoPi-R2S-Build-By-Actions/master/r2s-rk3328-config
           cp r2s-rk3328-config .config
 
+      - name: Setting defaults
+        run: |
+          cd friendlywrt-rk3328/friendlywrt
+          sed -i '/exit/i\chown -R root:root /usr/share/netdata/web' package/lean/default-settings/files/zzz-default-settings
+          sed -i 's/option fullcone\t1/option fullcone\t0/' package/network/config/firewall/files/firewall.config
+          sed -i '/8.8.8.8/d' package/base-files/files/root/setup.sh
+
       - name: Download package
         if: always()
         run: |

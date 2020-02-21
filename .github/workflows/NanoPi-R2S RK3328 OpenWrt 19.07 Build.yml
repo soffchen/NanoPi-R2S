@@ -64,12 +64,18 @@ jobs:
         run: |
           cd friendlywrt-rk3328/friendlywrt/package
           git clone https://github.com/frainzy1477/luci-app-clash
+
+      - name: Clash Binaries
+        run: |
           mkdir -p friendlywrt-rk3328/friendlywrt/package/base-files/files/etc/clash
           cd friendlywrt-rk3328/friendlywrt/package/base-files/files/etc/clash
           wget https://github.com/frainzy1477/clash_dev/releases/download/v0.17.2/clash-linux-armv8-v0.17.2.gz
           gunzip clash-linux-armv8-v0.17.2.gz
           chmod +x clash-linux-armv8-v0.17.2
           mv clash-linux-armv8-v0.17.2 clash
+
+      - name: Set Clash version
+        run: |
           mkdir -p friendlywrt-rk3328/friendlywrt/package/base-files/files/usr/share/clash
           cd friendlywrt-rk3328/friendlywrt/package/base-files/files/usr/share/clash
           echo 0.17.2 > core_version

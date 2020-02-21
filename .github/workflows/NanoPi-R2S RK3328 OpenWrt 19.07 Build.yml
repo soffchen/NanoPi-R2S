@@ -92,6 +92,11 @@ jobs:
           ./scripts/feeds update -a
           ./scripts/feeds install -a
 
+      - name: Mods
+        run: |
+          cd friendlywrt-rk3328
+          . ../remove_used_config.sh
+
       - name: Costom Configure File
         run: |
           cd friendlywrt-rk3328/friendlywrt

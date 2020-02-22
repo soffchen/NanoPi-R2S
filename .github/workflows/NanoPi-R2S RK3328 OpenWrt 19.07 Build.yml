@@ -96,6 +96,8 @@ jobs:
         run: |
           cd friendlywrt-rk3328
           . ../remove_used_config.sh
+          sed -i 's/1.19.0/1.20.0/g' friendlywrt/feeds/packages/admin/netdata/Makefile
+          sed -i 's/007656f639d3544698af503f35550aeb4d4d5a06b81801bf5acf4ac21db68f6e/c739e0fa8d6d7f433c0c7c8016b763e8f70519d67f0b5e7eca9ee5318f210d90/g' friendlywrt/feeds/packages/admin/netdata/Makefile
 
       - name: Custom Configure File
         run: |

@@ -58,8 +58,8 @@ jobs:
           git clone https://github.com/coolsnowwolf/lede
           cd friendlywrt
           cp -r ../lede/package/lean package/
-          sed -i 's/https:\/\/git.openwrt.org\/project\/luci.git^adbbd5cf690cf993e0de1e56266ac6fd2b2dfe91/https:\/\/github.com\/coolsnowwolf\/luci/' feeds.conf.default
-          sed -i 's/https:\/\/git.openwrt.org\/feed\/packages.git^1ec76dd7ca647f76a75c4f88b3b70d154221e7e9/https:\/\/github.com\/coolsnowwolf\/packages/' feeds.conf.default
+          sed -i 's/https:\/\/github.com\/friendlyarm\/friendlywrt_project_luci^bb021b4b9097ad332ab40bce2a1c239d9fcf225b/https:\/\/github.com\/coolsnowwolf\/luci/' feeds.conf.default
+          sed -i 's/https:\/\/git.openwrt.org\/feed\/packages.git^54266c99b2a2e37a4c01b02ae74346874db7003c/https:\/\/github.com\/coolsnowwolf\/packages/' feeds.conf.default
 
       - name: Luci for Clash
         run: |
@@ -96,6 +96,8 @@ jobs:
         run: |
           cd friendlywrt-rk3328
           . ../remove_used_config.sh
+          sed -i 's/1.19.0/1.20.0/g' friendlywrt/feeds/packages/admin/netdata/Makefile
+          sed -i 's/007656f639d3544698af503f35550aeb4d4d5a06b81801bf5acf4ac21db68f6e/c739e0fa8d6d7f433c0c7c8016b763e8f70519d67f0b5e7eca9ee5318f210d90/g' friendlywrt/feeds/packages/admin/netdata/Makefile
 
       - name: Custom Configure File
         run: |

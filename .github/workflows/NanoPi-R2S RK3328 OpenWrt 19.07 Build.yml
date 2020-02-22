@@ -40,6 +40,7 @@ jobs:
 
       - name: Download Source
         run: |
+          rm -rf friendlywrt-rk3328
           mkdir friendlywrt-rk3328
           cd friendlywrt-rk3328
           repo init -u https://github.com/friendlyarm/friendlywrt_manifests -b master -m rk3328.xml --repo-url=https://github.com/friendlyarm/repo --no-clone-bundle

@@ -2,8 +2,8 @@ name: NanoPi-R2S RK3328 OpenWrt 19.07 Build
 
 on:
   push:
-    branches:
-      - master
+    paths:
+      - 'Version'
 
 jobs:
 
@@ -18,7 +18,7 @@ jobs:
         with:
           ref: master
 
-      - name: Initialization Environment
+      - name: Initialize Environment
         env:
           DEBIAN_FRONTEND: noninteractive
         run: |
@@ -66,7 +66,7 @@ jobs:
           cd friendlywrt-rk3328/friendlywrt/package
           git clone https://github.com/frainzy1477/luci-app-clash
 
-      - name: Clash Binaries
+      - name: Install Clash Binaries
         run: |
           mkdir -p friendlywrt-rk3328/friendlywrt/package/base-files/files/etc/clash
           cd friendlywrt-rk3328/friendlywrt/package/base-files/files/etc/clash
@@ -75,7 +75,7 @@ jobs:
           chmod +x clash-linux-armv8-v0.17.2
           mv clash-linux-armv8-v0.17.2 clash
 
-      - name: Set Clash version
+      - name: Set Clash Version
         run: |
           mkdir -p friendlywrt-rk3328/friendlywrt/package/base-files/files/usr/share/clash
           cd friendlywrt-rk3328/friendlywrt/package/base-files/files/usr/share/clash
@@ -92,26 +92,26 @@ jobs:
           ./scripts/feeds update -a
           ./scripts/feeds install -a
 
-      - name: Mods
+      - name: Install Mods
         run: |
           cd friendlywrt-rk3328
           . ../remove_used_config.sh
 
-      - name: Costom Configure File
+      - name: Custom Configure File
         run: |
           cd friendlywrt-rk3328/friendlywrt
           rm -f ./.config*
           wget https://raw.githubusercontent.com/soffchen/NanoPi-R2S-Build-By-Actions/master/r2s-rk3328-config
           cp r2s-rk3328-config .config
 
-      - name: Setting defaults
+      - name: Setting Defaults
         run: |
           cd friendlywrt-rk3328/friendlywrt
           sed -i '/exit/i\chown -R root:root /usr/share/netdata/web' package/lean/default-settings/files/zzz-default-settings
           sed -i 's/option fullcone\t1/option fullcone\t0/' package/network/config/firewall/files/firewall.config
           sed -i '/8.8.8.8/d' package/base-files/files/root/setup.sh
 
-      - name: Download package
+      - name: Download Packages
         if: always()
         run: |
           cd friendlywrt-rk3328/friendlywrt
@@ -119,7 +119,7 @@ jobs:
           find dl -size -1024c -exec ls -l {} \;
           find dl -size -1024c -exec rm -f {} \;
 
-      - name: Install upx
+      - name: Install UPX
         run: |
           ln -s /usr/bin/upx-ucl friendlywrt-rk3328/friendlywrt/staging_dir/host/bin/upx
 
@@ -137,6 +137,8 @@ jobs:
           rm -rf ./artifact/
           mkdir -p ./artifact/
           find friendlywrt-rk3328/out/ -name "FriendlyWrt_*img.zip*" | xargs -i mv -f {} ./artifact/
+          cp friendlywrt-rk3328/friendlywrt/.config ./artifact/
+
       - name: Upload Artifact
         uses: actions/upload-artifact@master
         with:

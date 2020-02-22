@@ -4,12 +4,16 @@
 
 R2S 购买链接: [https://s.click.taobao.com/rFvYQpv](https://s.click.taobao.com/rFvYQpv)
 
+## 说明
+* IP: 192.168.2.1
+* 密码: password
+
 ## 特色
 * 集成 [frainzy1477/luci-app-clash](https://github.com/frainzy1477/luci-app-clash) 及其 clash bin
 * 集成 Lean Lede 常用包
 
 ## 用法
-Fork, 编辑文件 Version 触发编译动作。
+Fork, 把 yml 里面的 `runs-on: self-hosted` 改成 `runs-on: ubuntu-latest`（因为我是自己的服务器上编译，更快），编辑文件 Version 触发编译动作。
 
 ## 参考
 * [使用Github的Actions功能在线编译NanoPi-R1S固件（包含H5和H3）](https://totoro.site/index.php/archives/70/)

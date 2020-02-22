@@ -58,8 +58,8 @@ jobs:
           git clone https://github.com/coolsnowwolf/lede
           cd friendlywrt
           cp -r ../lede/package/lean package/
-          sed -i 's/https:\/\/github.com\/friendlyarm\/friendlywrt_project_luci^bb021b4b9097ad332ab40bce2a1c239d9fcf225b/https:\/\/github.com\/coolsnowwolf\/luci/' feeds.conf.default
-          sed -i 's/https:\/\/git.openwrt.org\/feed\/packages.git^54266c99b2a2e37a4c01b02ae74346874db7003c/https:\/\/github.com\/coolsnowwolf\/packages/' feeds.conf.default
+          sed -i 's/^src-git luci.*/src-git luci https:\/\/github.com\/coolsnowwolf\/luci/' feeds.conf.default
+          sed -i 's/^src-git packages.*/src-git packages https:\/\/github.com\/coolsnowwolf\/packages/' feeds.conf.default
 
       - name: Luci for Clash
         run: |

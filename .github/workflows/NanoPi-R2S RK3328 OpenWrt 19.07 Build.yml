@@ -24,7 +24,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo rm -rf /usr/share/dotnet /usr/local/lib/android/sdk
-          docker image prune -a -f
+          sudo docker image prune -a -f
           sudo apt-get -y install upx-ucl
           sudo apt-get -y purge dotnet* ghc* google* llvm* mysql* php* zulu* firefox hhvm powershell
           sudo apt-get -y autoremove --purge          
@@ -61,7 +61,7 @@ jobs:
           sed -i 's/^src-git luci.*/src-git luci https:\/\/github.com\/coolsnowwolf\/luci/' feeds.conf.default
           sed -i 's/^src-git packages.*/src-git packages https:\/\/github.com\/coolsnowwolf\/packages/' feeds.conf.default
 
-      - name: Luci for Clash
+      - name: Install Luci for Clash
         run: |
           cd friendlywrt-rk3328/friendlywrt/package
           git clone https://github.com/frainzy1477/luci-app-clash
@@ -99,7 +99,7 @@ jobs:
           sed -i 's/1.19.0/1.20.0/g' friendlywrt/feeds/packages/admin/netdata/Makefile
           sed -i 's/007656f639d3544698af503f35550aeb4d4d5a06b81801bf5acf4ac21db68f6e/c739e0fa8d6d7f433c0c7c8016b763e8f70519d67f0b5e7eca9ee5318f210d90/g' friendlywrt/feeds/packages/admin/netdata/Makefile
 
-      - name: Custom Configure File
+      - name: Custom Configure Files
         run: |
           cd friendlywrt-rk3328/friendlywrt
           rm -f ./.config*

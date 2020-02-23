@@ -71,16 +71,16 @@ jobs:
         run: |
           mkdir -p friendlywrt-rk3328/friendlywrt/package/base-files/files/etc/clash
           cd friendlywrt-rk3328/friendlywrt/package/base-files/files/etc/clash
-          wget https://github.com/frainzy1477/clash_dev/releases/download/v0.17.2/clash-linux-armv8-v0.17.2.gz
-          gunzip clash-linux-armv8-v0.17.2.gz
-          chmod +x clash-linux-armv8-v0.17.2
-          mv clash-linux-armv8-v0.17.2 clash
+          wget https://github.com/Dreamacro/clash/releases/download/v0.18.0/clash-linux-armv8-v0.18.0.gz
+          gunzip clash-linux-armv8-v0.18.0.gz
+          chmod +x clash-linux-armv8-v0.18.0
+          mv clash-linux-armv8-v0.18.0 clash
 
       - name: Set Clash Version
         run: |
           mkdir -p friendlywrt-rk3328/friendlywrt/package/base-files/files/usr/share/clash
           cd friendlywrt-rk3328/friendlywrt/package/base-files/files/usr/share/clash
-          echo 0.17.2 > core_version
+          echo 0.18.0 > core_version
 
       - name: Update Target.mk
         run: |
@@ -114,7 +114,8 @@ jobs:
       - name: Setting Defaults
         run: |
           cd friendlywrt-rk3328/friendlywrt
-          sed -i '/exit/i\chown -R root:root /usr/share/netdata/web' package/lean/default-settings/files/zzz-default-settings
+          sed -i '/uci commit luci/i\uci set luci.themes.Argon=/luci-static/argon\nuci set luci.main.mediaurlbase=/luci-static/argon' package/lean/default-settings/files/zzz-default-settings
+          sed -i '/exit/i\chown -R root:root /usr/share/netdata/web\n' package/lean/default-settings/files/zzz-default-settings
           sed -i 's/option fullcone\t1/option fullcone\t0/' package/network/config/firewall/files/firewall.config
           sed -i '/8.8.8.8/d' package/base-files/files/root/setup.sh
 

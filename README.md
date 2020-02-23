@@ -11,6 +11,7 @@ R2S 购买链接: [https://s.click.taobao.com/rFvYQpv](https://s.click.taobao.co
 ## 特色
 * 集成 [frainzy1477/luci-app-clash](https://github.com/frainzy1477/luci-app-clash) 及其 clash bin
 * 集成 Lean Lede 常用包
+* 集成最新实时监控 Netdata v1.20.0
 
 ## 用法
 Fork, 把 Actions yml 里面的 `runs-on: self-hosted` 改成 `runs-on: ubuntu-latest`（因为我是自己的服务器上编译，更快），编辑文件 Version 触发编译动作。

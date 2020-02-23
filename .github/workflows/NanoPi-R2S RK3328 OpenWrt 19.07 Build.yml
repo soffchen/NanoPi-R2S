@@ -96,6 +96,7 @@ jobs:
       - name: Install Mods
         run: |
           cd friendlywrt-rk3328
+          sed -i 's/CONFIG_BPFILTER=y/CONFIG_BPFILTER=m/' kernel/arch/arm64/configs/nanopi-r2_linux_defconfig
           sed -i '/=m/d;/CONFIG_IB/d;/CONFIG_SDK/d;/CONFIG_BUILDBOT/d;/CONFIG_ALL_KMODS/d;/CONFIG_ALL_NONSHARED/d' configs/config_rk3328
           sed -i '/iptparser/d;/docker/d;/DOCKER/d;/CONFIG_DISPLAY_SUPPORT/d;/CONFIG_AUDIO_SUPPORT/d' configs/config_rk3328
           sed -i "/redirect_https/d" friendlywrt/package/network/services/uhttpd/files/uhttpd.config

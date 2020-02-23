@@ -97,6 +97,7 @@ jobs:
         run: |
           cd friendlywrt-rk3328
           . ../remove_used_config.sh
+          sed -i "/redirect_https/d" friendlywrt/package/network/services/uhttpd/files/uhttpd.config
 
       - name: Custom Configure Files
         run: |

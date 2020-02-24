@@ -47,10 +47,8 @@ jobs:
 
       - name: Merge UpStearm OpenWrt
         run: |
-          cd friendlywrt-rk3328
-          cd .repo/manifests
-          wget https://raw.githubusercontent.com/soffchen/NanoPi-R2S-Build-By-Actions/master/source_xml/rk3328_19.07.xml
-          mv rk3328_19.07.xml rk3328.xml
+          cd friendlywrt-rk3328/.repo/manifests
+          cp ../../../source_xml/rk3328_19.07.xml rk3328.xml
           repo sync -c --no-clone-bundle
 
       - name: Merge LEDE
@@ -106,10 +104,8 @@ jobs:
 
       - name: Custom Configure Files
         run: |
-          cd friendlywrt-rk3328/friendlywrt
-          rm -f ./.config*
-          wget https://raw.githubusercontent.com/soffchen/NanoPi-R2S-Build-By-Actions/master/r2s-rk3328-config
-          cp r2s-rk3328-config .config
+          rm -f friendlywrt-rk3328/friendlywrt/.config*
+          cp r2s-rk3328-config friendlywrt-rk3328/friendlywrt/.config
 
       - name: Setting Defaults
         run: |

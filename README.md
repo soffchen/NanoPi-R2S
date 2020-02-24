@@ -14,10 +14,10 @@ NanoPi R2S 购买链接: [https://s.click.taobao.com/rFvYQpv](https://s.click.ta
 * 集成最新实时监控 Netdata v1.20.0
 
 ## 用法
-Fork, 把 Actions yml 里面的 `runs-on: self-hosted` 改成 `runs-on: ubuntu-latest`（因为我是自己的服务器上编译，更快），编辑文件 Version 触发编译动作。
+Fork 到自己的账号下，将 `.github/workflows` 下 `.yml` 文件中的 `runs-on: self-hosted` 改成 `runs-on: ubuntu-latest`（因为我是自己的服务器上编译，更快），编辑文件 `Version` 触发编译动作。
 
 ## 注意
-产品发布初期，官方代码每天都在变，遇到无法编译时，请过来查看 Actions yml 最新更改。
+产品发布初期，官方代码每天都在变，遇到无法编译时，请过来查看 `.yml` 与 `config` 最新异动。
 
 ## 参考
 * [使用Github的Actions功能在线编译NanoPi-R1S固件（包含H5和H3）](https://totoro.site/index.php/archives/70/)

@@ -1,8 +1,6 @@
 # 使用 Github Actions 在线编译 NanoPi-R2S 固件
 
-已更新到 19.07.1
-
-R2S 购买链接: [https://s.click.taobao.com/rFvYQpv](https://s.click.taobao.com/rFvYQpv)
+NanoPi R2S 购买链接: [https://s.click.taobao.com/rFvYQpv](https://s.click.taobao.com/rFvYQpv)
 
 ## 说明
 * IP: 192.168.2.1
@@ -10,6 +8,8 @@ R2S 购买链接: [https://s.click.taobao.com/rFvYQpv](https://s.click.taobao.co
 
 ## 特色
 * 集成 [frainzy1477/luci-app-clash](https://github.com/frainzy1477/luci-app-clash) 及其 clash bin
+* 集成 [vernesong/OpenClash](https://github.com/vernesong/OpenClash) 及其 clash bin（CONFIG_PACKAGE_luci-app-openclash 默认没开启）
+* 集成 [rufengsuixing/luci-app-adguardhome](https://github.com/rufengsuixing/luci-app-adguardhome)（CONFIG_PACKAGE_luci-app-adguardhome 默认没开启）
 * 集成 Lean Lede 常用包
 * 集成最新实时监控 Netdata v1.20.0
 
@@ -23,3 +23,4 @@ Fork, 把 Actions yml 里面的 `runs-on: self-hosted` 改成 `runs-on: ubuntu-l
 * [使用Github的Actions功能在线编译NanoPi-R1S固件（包含H5和H3）](https://totoro.site/index.php/archives/70/)
 * [skytotwo/NanoPi-R1S-Build-By-Actions](https://github.com/skytotwo/NanoPi-R1S-Build-By-Actions)
 * [klever1988/nanopi-openwrt](https://github.com/klever1988/nanopi-openwrt)
+* [yangliu/NanoPi-R2S](https://github.com/yangliu/NanoPi-R2S)

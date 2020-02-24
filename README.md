@@ -10,7 +10,7 @@ NanoPi R2S 购买链接: [https://s.click.taobao.com/rFvYQpv](https://s.click.ta
 * 集成 [frainzy1477/luci-app-clash](https://github.com/frainzy1477/luci-app-clash) 及其 clash bin
 * 集成 [vernesong/OpenClash](https://github.com/vernesong/OpenClash) 及其 clash bin（CONFIG_PACKAGE_luci-app-openclash 默认没开启）
 * 集成 [rufengsuixing/luci-app-adguardhome](https://github.com/rufengsuixing/luci-app-adguardhome)（CONFIG_PACKAGE_luci-app-adguardhome 默认没开启）
-* 集成 Lean Lede 常用包
+* 集成 [coolsnowwolf/packages](https://github.com/coolsnowwolf/packages) 与 [coolsnowwolf/luci](https://github.com/coolsnowwolf/luci)
 * 集成最新实时监控 Netdata v1.20.0
 
 ## 用法

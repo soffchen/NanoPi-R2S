@@ -152,7 +152,7 @@ jobs:
           mkdir -p ./artifact/
           find friendlywrt-rk3328/out/ -name "FriendlyWrt_*img.zip*" | xargs -i mv -f {} ./artifact/
           cp friendlywrt-rk3328/friendlywrt/.config ./artifact/
-          cp friendlywrt-rk3328/friendlywrt/out/config.lite ./artifact/
+          cp friendlywrt-rk3328/out/config.lite ./artifact/
 
       - name: Upload Artifact
         uses: actions/upload-artifact@master

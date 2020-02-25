@@ -141,7 +141,7 @@ jobs:
 
       - name: Zip Files
         run: |
-          find friendlywrt-rk3328/out/ -name "FriendlyWrt_*img*" | xargs -i zip -1 -r {}.zip {}
+          find friendlywrt-rk3328/out/ -name "FriendlyWrt_*img*" | xargs -i zip -r {}.zip {}
 
       - name: Save config.lite
         run: |

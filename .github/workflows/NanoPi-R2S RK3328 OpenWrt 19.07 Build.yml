@@ -110,6 +110,7 @@ jobs:
           sed -i '/CONFIG_IB/d;/CONFIG_SDK/d;/CONFIG_BUILDBOT/d;/CONFIG_ALL_KMODS/d;/CONFIG_ALL_NONSHARED/d' configs/config_rk3328
           sed -i '/iptparser/d;/docker/d;/DOCKER/d;/CONFIG_DISPLAY_SUPPORT/d;/CONFIG_AUDIO_SUPPORT/d' configs/config_rk3328
           sed -i '/Load Average/i\\t\t<tr><td width="33%"><%:CPU Temperature%></td><td><%=luci.sys.exec("cut -c1-2 /sys/class/thermal/thermal_zone0/temp")%></td></tr>' friendlywrt/feeds/luci/modules/luci-mod-admin-full/luasrc/view/admin_status/index.htm
+          sed -i 's/pcdata(boardinfo.system or "?")/"ARMv8"/' friendlywrt/feeds/luci/modules/luci-mod-admin-full/luasrc/view/admin_status/index.htm
           sed -i "/redirect_https/d" friendlywrt/package/network/services/uhttpd/files/uhttpd.config
           sed -i 's/1.19.0/1.20.0/g' friendlywrt/feeds/packages/admin/netdata/Makefile
           sed -i 's/007656f639d3544698af503f35550aeb4d4d5a06b81801bf5acf4ac21db68f6e/c739e0fa8d6d7f433c0c7c8016b763e8f70519d67f0b5e7eca9ee5318f210d90/g' friendlywrt/feeds/packages/admin/netdata/Makefile

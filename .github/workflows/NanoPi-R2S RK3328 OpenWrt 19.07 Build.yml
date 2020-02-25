@@ -139,7 +139,12 @@ jobs:
 
       - name: Zip Files
         run: |
-          find friendlywrt-rk3328/out/ -name "FriendlyWrt_*img*" | xargs -i zip -r {}.zip {}
+          find friendlywrt-rk3328/out/ -name "FriendlyWrt_*img*" | xargs -i zip -1 -r {}.zip {}
+
+      - name: Save config.lite
+        run: |
+          cd friendlywrt-rk3328/friendlywrt
+          ./scripts/diffconfig.sh > ../out/config.lite
 
       - name: Assemble Artifact
         run: |
@@ -147,6 +152,7 @@ jobs:
           mkdir -p ./artifact/
           find friendlywrt-rk3328/out/ -name "FriendlyWrt_*img.zip*" | xargs -i mv -f {} ./artifact/
           cp friendlywrt-rk3328/friendlywrt/.config ./artifact/
+          cp friendlywrt-rk3328/friendlywrt/out/config.lite ./artifact/
 
       - name: Upload Artifact
         uses: actions/upload-artifact@master

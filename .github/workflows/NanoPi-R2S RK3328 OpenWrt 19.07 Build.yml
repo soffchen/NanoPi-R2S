@@ -136,7 +136,6 @@ jobs:
           cd friendlywrt-rk3328/friendlywrt
           sed -i '/uci commit luci/i\uci set luci.themes.Argon=/luci-static/argon\nuci set luci.main.mediaurlbase=/luci-static/argon' package/lean/default-settings/files/zzz-default-settings
           sed -i '/exit/i\chown -R root:root /usr/share/netdata/web\n' package/lean/default-settings/files/zzz-default-settings
-          sed -i 's/option fullcone\t1/option fullcone\t0/' package/network/config/firewall/files/firewall.config
           sed -i '/8.8.8.8/d' package/base-files/files/root/setup.sh
 
       - name: Install UPX

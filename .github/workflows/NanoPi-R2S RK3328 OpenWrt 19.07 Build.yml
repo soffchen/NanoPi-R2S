@@ -107,8 +107,18 @@ jobs:
       - name: Install Mods
         run: |
           cd friendlywrt-rk3328
+
+          rm -rf friendlywrt/package/network/config/firewall
+          cp -r lede/package/network/config/firewall friendlywrt/package/network/config/
+          sed -i '/CONFIG_NETFILTER_XT_TARGET_HMARK/i\CONFIG_NETFILTER_XT_TARGET_FULLCONENAT=m' kernel/arch/arm64/configs/nanopi-r2_linux_defconfig
+          sed -i '/CONFIG_NETFILTER_XT_TARGET_IDLETIMER/a\obj-$(CONFIG_NETFILTER_XT_TARGET_FULLCONENAT) += xt_FULLCONENAT.o' kernel/net/netfilter/Makefile
+          wget -O kernel/net/netfilter/xt_FULLCONENAT.c https://raw.githubusercontent.com/soffchen/NanoPi-R2S/master/xt_FULLCONENAT/xt_FULLCONENAT.c
+          wget -O kernel/net/ipv4/netfilter/Kconfig https://raw.githubusercontent.com/soffchen/NanoPi-R2S/master/xt_FULLCONENAT/ipv4-netfilter.Kconfig
+          wget -O kernel/net/netfilter/Kconfig https://raw.githubusercontent.com/soffchen/NanoPi-R2S/master/xt_FULLCONENAT/netfilter.Kconfig
+
           sed -i '/CONFIG_IB/d;/CONFIG_SDK/d;/CONFIG_BUILDBOT/d;/CONFIG_ALL_KMODS/d;/CONFIG_ALL_NONSHARED/d' configs/config_rk3328
           sed -i '/iptparser/d;/docker/d;/DOCKER/d;/CONFIG_DISPLAY_SUPPORT/d;/CONFIG_AUDIO_SUPPORT/d' configs/config_rk3328
+
           sed -i '/Load Average/i\\t\t<tr><td width="33%"><%:CPU Temperature%></td><td><%=luci.sys.exec("cut -c1-2 /sys/class/thermal/thermal_zone0/temp")%></td></tr>' friendlywrt/feeds/luci/modules/luci-mod-admin-full/luasrc/view/admin_status/index.htm
           sed -i 's/pcdata(boardinfo.system or "?")/"ARMv8"/' friendlywrt/feeds/luci/modules/luci-mod-admin-full/luasrc/view/admin_status/index.htm
           sed -i "/redirect_https/d" friendlywrt/package/network/services/uhttpd/files/uhttpd.config

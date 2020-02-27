@@ -11,6 +11,7 @@ NanoPi R2S 购买链接: [https://s.click.taobao.com/rFvYQpv](https://s.click.ta
 * 集成 [vernesong/OpenClash](https://github.com/vernesong/OpenClash) 及其 clash bin
 * 集成 [rufengsuixing/luci-app-adguardhome](https://github.com/rufengsuixing/luci-app-adguardhome)（CONFIG_PACKAGE_luci-app-adguardhome 默认没开启）
 * 集成 [coolsnowwolf/packages](https://github.com/coolsnowwolf/packages) 与 [coolsnowwolf/luci](https://github.com/coolsnowwolf/luci)
+* 更新 [jerrykuku/luci-theme-argon](https://github.com/jerrykuku/luci-theme-argon)
 * 集成最新实时监控 Netdata v1.20.0
 
 ## 用法
@@ -24,3 +25,4 @@ Fork 到自己的账号下，将 `.github/workflows` 下 `.yml` 文件中的 `ru
 * [skytotwo/NanoPi-R1S-Build-By-Actions](https://github.com/skytotwo/NanoPi-R1S-Build-By-Actions)
 * [klever1988/nanopi-openwrt](https://github.com/klever1988/nanopi-openwrt)
 * [yangliu/NanoPi-R2S](https://github.com/yangliu/NanoPi-R2S)
+* [maxming2333/NanoPi-R2S](https://github.com/maxming2333/NanoPi-R2S)

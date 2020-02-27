@@ -7,6 +7,7 @@ NanoPi R2S 购买链接: [https://s.click.taobao.com/rFvYQpv](https://s.click.ta
 * 密码: password
 
 ## 特色
+* 支持 RTL8821CU 芯片的 WiFi 棒子，如 [COMFAST](https://u.jd.com/DOkkhX)
 * 集成 [frainzy1477/luci-app-clash](https://github.com/frainzy1477/luci-app-clash) 及其 clash bin（CONFIG_PACKAGE_luci-app-clash 默认没开启）
 * 集成 [vernesong/OpenClash](https://github.com/vernesong/OpenClash) 及其 clash bin
 * 集成 [rufengsuixing/luci-app-adguardhome](https://github.com/rufengsuixing/luci-app-adguardhome)（CONFIG_PACKAGE_luci-app-adguardhome 默认没开启）

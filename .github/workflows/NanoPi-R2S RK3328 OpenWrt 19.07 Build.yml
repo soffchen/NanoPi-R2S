@@ -139,9 +139,7 @@ jobs:
       - name: Setting Defaults
         run: |
           cd friendlywrt-rk3328/friendlywrt
-          sed -i '/uci commit luci/i\uci set luci.themes.Argon=/luci-static/argon\nuci set luci.main.mediaurlbase=/luci-static/argon' package/lean/default-settings/files/zzz-default-settings
-          sed -i '/exit/i\chown -R root:root /usr/share/netdata/web\n' package/lean/default-settings/files/zzz-default-settings
-          sed -i '/8.8.8.8/d' package/base-files/files/root/setup.sh
+          sed -i '/uci commit luci/i\uci set luci.main.mediaurlbase=/luci-static/argon' package/lean/default-settings/files/zzz-default-settings
 
       - name: Install UPX
         run: |

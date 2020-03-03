@@ -3892,7 +3892,7 @@ CONFIG_PACKAGE_luci-app-netdata=y
 # CONFIG_PACKAGE_luci-app-nft-qos is not set
 CONFIG_PACKAGE_luci-app-nlbwmon=y
 # CONFIG_PACKAGE_luci-app-noddos is not set
-=CONFIG_PACKAGE_luci-app-nps=y
+CONFIG_PACKAGE_luci-app-nps=y
 CONFIG_PACKAGE_luci-app-ntpc=y
 # CONFIG_PACKAGE_luci-app-ocserv is not set
 # CONFIG_PACKAGE_luci-app-olsr is not set

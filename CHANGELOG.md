@@ -1,3 +1,7 @@
+## 20200308
+* 只允许从 LAN 访问 SSH
+* 更换 luci-app-unblockmusic
+
 ## 20200229
 * 官方修复每次重启 Mac 地址变化问题
 
@@ -12,5 +16,3 @@
 ## 20200226
 * 添加 frpc 和 npc
 * 支持 Full Cone NAT
-
-prepare

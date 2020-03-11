@@ -111,6 +111,17 @@ jobs:
           
           #cp ../patches/31-usb_wifi friendlywrt/package/base-files/files/etc/hotplug.d/usb/31-usb_wifi
 
+          git clone https://github.com/openwrt/openwrt
+          rm -rf friendlywrt/target/linux/rockchip-rk3328/patches-5.4
+          mkdir -p friendlywrt/target/linux/rockchip-rk3328/patches-5.4
+          echo "CONFIG_NETFILTER_XT_TARGET_FLOWOFFLOAD=m" >> kernel/arch/arm64/configs/nanopi-r2_linux_defconfig
+          cp openwrt/target/linux/generic/backport-5.4/*netfilter* friendlywrt/target/linux/rockchip-rk3328/patches-5.4
+          cp openwrt/target/linux/generic/hack-5.4/*netfilter* friendlywrt/target/linux/rockchip-rk3328/patches-5.4
+          cp openwrt/target/linux/generic/pending-5.4/*netfilter* friendlywrt/target/linux/rockchip-rk3328/patches-5.4
+          cp openwrt/target/linux/generic/pending-5.4/*offload* friendlywrt/target/linux/rockchip-rk3328/patches-5.4
+          cp openwrt/target/linux/generic/hack-5.4/901-debloat_sock_diag.patch friendlywrt/target/linux/rockchip-rk3328/patches-5.4
+          friendlywrt/scripts/patch-kernel.sh kernel friendlywrt/target/linux/rockchip-rk3328/patches-5.4
+
           rm -rf friendlywrt/package/network/config/firewall
           cp -r lede/package/network/config/firewall friendlywrt/package/network/config/
           sed -i '/CONFIG_NETFILTER_XT_TARGET_HMARK/i\CONFIG_NETFILTER_XT_TARGET_FULLCONENAT=m' kernel/arch/arm64/configs/nanopi-r2_linux_defconfig

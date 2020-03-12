@@ -114,7 +114,6 @@ jobs:
           git clone https://github.com/openwrt/openwrt
           rm openwrt/target/linux/generic/pending-5.4/403-mtd-hook-mtdsplit-to-Kbuild.patch
           rm openwrt/target/linux/generic/hack-5.4/700-swconfig_switch_drivers.patch
-          cd openwrt/
           friendlywrt/scripts/patch-kernel.sh kernel openwrt/target/linux/generic/backport-5.4
           friendlywrt/scripts/patch-kernel.sh kernel openwrt/target/linux/generic/pending-5.4
           friendlywrt/scripts/patch-kernel.sh kernel openwrt/target/linux/generic/hack-5.4

@@ -70,10 +70,10 @@ jobs:
         run: |
           mkdir -p friendlywrt-rk3328/friendlywrt/package/base-files/files/etc/clash
           cd friendlywrt-rk3328/friendlywrt/package/base-files/files/etc/clash
-          wget https://github.com/Dreamacro/clash/releases/download/v0.18.0/clash-linux-armv8-v0.18.0.gz
-          gunzip clash-linux-armv8-v0.18.0.gz
-          chmod +x clash-linux-armv8-v0.18.0
-          mv clash-linux-armv8-v0.18.0 clash
+          wget https://github.com/Dreamacro/clash/releases/download/v0.19.0/clash-linux-armv8-v0.19.0.gz
+          gunzip clash-linux-armv8-v0.19.0.gz
+          chmod +x clash-linux-armv8-v0.19.0
+          mv clash-linux-armv8-v0.19.0 clash
           mkdir ../openclash
           cp clash ../openclash/
 

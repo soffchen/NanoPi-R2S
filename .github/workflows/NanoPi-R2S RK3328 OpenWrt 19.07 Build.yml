@@ -133,6 +133,8 @@ jobs:
           sed -i '/Load Average/i\\t\t<tr><td width="33%"><%:CPU Temperature%></td><td><%=luci.sys.exec("cut -c1-2 /sys/class/thermal/thermal_zone0/temp")%></td></tr>' friendlywrt/feeds/luci/modules/luci-mod-admin-full/luasrc/view/admin_status/index.htm
           sed -i 's/pcdata(boardinfo.system or "?")/"ARMv8"/' friendlywrt/feeds/luci/modules/luci-mod-admin-full/luasrc/view/admin_status/index.htm
           sed -i "/redirect_https/d" friendlywrt/package/network/services/uhttpd/files/uhttpd.config
+          sed -i 's/option fullcone\t1/option fullcone\t\t0/' friendlywrt/package/network/config/firewall/files/firewall.config
+          sed -i 's/flow_offloading=1/flow_offloading=0/' friendlywrt/package/lean/luci-app-flowoffload/root/etc/uci-defaults/flowoffload
 
       - name: Custom Configure Files
         run: |

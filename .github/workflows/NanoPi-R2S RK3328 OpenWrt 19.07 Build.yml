@@ -111,9 +111,6 @@ jobs:
           
           #cp ../patches/31-usb_wifi friendlywrt/package/base-files/files/etc/hotplug.d/usb/31-usb_wifi
 
-          rm -rf friendlywrt/package/libs
-          cp -r openwrt/package/libs friendlywrt/package/
-
           rm -rf friendlywrt/package/network/config/firewall
           cp -r lede/package/network/config/firewall friendlywrt/package/network/config/
           sed -i '/CONFIG_NETFILTER_XT_TARGET_HMARK/i\CONFIG_NETFILTER_XT_TARGET_FULLCONENAT=m' kernel/arch/arm64/configs/nanopi-r2_linux_defconfig
@@ -130,6 +127,9 @@ jobs:
           friendlywrt/scripts/patch-kernel.sh kernel openwrt/target/linux/generic/hack-5.4
           echo "CONFIG_NETFILTER_XT_TARGET_FLOWOFFLOAD=m" >> kernel/arch/arm64/configs/nanopi-r2_linux_defconfig
 
+          rm -rf friendlywrt/package/libs
+          cp -r openwrt/package/libs friendlywrt/package/
+          
           sed -i '/CONFIG_IB/d;/CONFIG_SDK/d;/CONFIG_BUILDBOT/d;/CONFIG_ALL_KMODS/d;/CONFIG_ALL_NONSHARED/d' configs/config_rk3328
           sed -i '/docker/Id;/CONFIG_DISPLAY_SUPPORT/d;/CONFIG_AUDIO_SUPPORT/d' configs/config_rk3328
 

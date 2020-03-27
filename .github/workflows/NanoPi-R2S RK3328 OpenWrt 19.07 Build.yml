@@ -111,6 +111,9 @@ jobs:
           
           #cp ../patches/31-usb_wifi friendlywrt/package/base-files/files/etc/hotplug.d/usb/31-usb_wifi
 
+          rm -rf friendlywrt/package/libs
+          cp -r openwrt/package/libs friendlywrt/package/
+
           rm -rf friendlywrt/package/network/config/firewall
           cp -r lede/package/network/config/firewall friendlywrt/package/network/config/
           sed -i '/CONFIG_NETFILTER_XT_TARGET_HMARK/i\CONFIG_NETFILTER_XT_TARGET_FULLCONENAT=m' kernel/arch/arm64/configs/nanopi-r2_linux_defconfig

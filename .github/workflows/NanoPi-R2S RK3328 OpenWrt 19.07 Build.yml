@@ -120,13 +120,6 @@ jobs:
           cp ../xt_FULLCONENAT/netfilter.Kconfig kernel/net/netfilter/Kconfig
 
           git clone https://github.com/openwrt/openwrt
-          rm openwrt/target/linux/generic/pending-5.4/403-mtd-hook-mtdsplit-to-Kbuild.patch
-          rm openwrt/target/linux/generic/hack-5.4/700-swconfig_switch_drivers.patch
-          friendlywrt/scripts/patch-kernel.sh kernel openwrt/target/linux/generic/backport-5.4
-          friendlywrt/scripts/patch-kernel.sh kernel openwrt/target/linux/generic/pending-5.4
-          friendlywrt/scripts/patch-kernel.sh kernel openwrt/target/linux/generic/hack-5.4
-          echo "CONFIG_NETFILTER_XT_TARGET_FLOWOFFLOAD=m" >> kernel/arch/arm64/configs/nanopi-r2_linux_defconfig
-
           rm -rf friendlywrt/package/libs
           cp -r openwrt/package/libs friendlywrt/package/
           

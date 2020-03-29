@@ -1,3 +1,6 @@
+## 20200329
+* 移除 Flow Offloading 补丁
+
 ## 20200326
 * 默认不开启 Full Cone NAT 与 Flow Offloading
 

@@ -74,14 +74,14 @@ jobs:
           gunzip clash-linux-armv8-v0.19.0.gz
           chmod +x clash-linux-armv8-v0.19.0
           mv clash-linux-armv8-v0.19.0 clash
-          mkdir ../openclash
-          cp clash ../openclash/
+          mkdir ../openclash/core
+          cp clash ../openclash/core/
 
       - name: Set Clash Version
         run: |
           mkdir -p friendlywrt-rk3328/friendlywrt/package/base-files/files/usr/share/clash
           cd friendlywrt-rk3328/friendlywrt/package/base-files/files/usr/share/clash
-          echo 0.18.0 > core_version
+          echo 0.19.0 > core_version
 
       - name: Install AdGuard Home
         run: |

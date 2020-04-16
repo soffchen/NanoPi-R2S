@@ -97,6 +97,12 @@ jobs:
           cd friendlywrt-rk3328/friendlywrt/include
           sed -i 's/dnsmasq /dnsmasq-full default-settings luci /' target.mk
 
+      - name: Update Feeds		
+        run: |		
+          cd friendlywrt-rk3328/friendlywrt		
+          ./scripts/feeds update -a		
+          ./scripts/feeds install -a
+
       - name: Install Mods
         run: |
           cd friendlywrt-rk3328

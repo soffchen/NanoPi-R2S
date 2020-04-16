@@ -7,7 +7,7 @@ NanoPi R2S 购买链接: [https://s.click.taobao.com/rFvYQpv](https://s.click.ta
 * 密码: password
 
 ## 特色
-* 支持 RTL8821CU 芯片的 USB WiFi 设备，已知支持列表：
+* 支持 RTL8821CU/RTL8822BU 芯片的 USB WiFi 设备，已知支持列表：
     - [COMFAST 726B](https://u.jd.com/DOkkhX)
     - [COMFAST CF-759BF](https://u.jd.com/C2ivH7)
 * 集成 [frainzy1477/luci-app-clash](https://github.com/frainzy1477/luci-app-clash) 及其 clash bin（CONFIG_PACKAGE_luci-app-clash 默认没开启）

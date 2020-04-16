@@ -53,10 +53,15 @@ jobs:
           cd friendlywrt
           cp -r ../lede/package/lean package/
 
-      - name: Install Luci for Clash
+      - name: Install Extra Packages
         run: |
           cd friendlywrt-rk3328/friendlywrt/package
           git clone https://github.com/frainzy1477/luci-app-clash
+          git clone https://github.com/fw876/helloworld.git
+          git clone https://github.com/rufengsuixing/luci-app-adguardhome.git
+          
+          rm -rf lean/luci-theme-argon
+          git clone https://github.com/jerrykuku/luci-theme-argon.git
 
       - name: Install OpenClash
         run: |
@@ -80,17 +85,6 @@ jobs:
           mkdir -p friendlywrt-rk3328/friendlywrt/package/base-files/files/usr/share/clash
           cd friendlywrt-rk3328/friendlywrt/package/base-files/files/usr/share/clash
           echo 0.19.0 > core_version
-
-      - name: Install AdGuard Home
-        run: |
-          cd friendlywrt-rk3328/friendlywrt/package
-          git clone https://github.com/rufengsuixing/luci-app-adguardhome.git
-
-      - name: Upgrade argon theme
-        run: |
-          cd friendlywrt-rk3328/friendlywrt/package
-          rm -rf lean/luci-theme-argon
-          git clone https://github.com/jerrykuku/luci-theme-argon.git
 
       - name: Update Target.mk
         run: |

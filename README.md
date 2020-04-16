@@ -13,9 +13,8 @@ NanoPi R2S 购买链接: [https://s.click.taobao.com/rFvYQpv](https://s.click.ta
 * 集成 [frainzy1477/luci-app-clash](https://github.com/frainzy1477/luci-app-clash) 及其 clash bin（CONFIG_PACKAGE_luci-app-clash 默认没开启）
 * 集成 [vernesong/OpenClash](https://github.com/vernesong/OpenClash) 及其 clash bin
 * 集成 [rufengsuixing/luci-app-adguardhome](https://github.com/rufengsuixing/luci-app-adguardhome)（CONFIG_PACKAGE_luci-app-adguardhome 默认没开启）
-* 集成 [coolsnowwolf/packages](https://github.com/coolsnowwolf/packages) 与 [coolsnowwolf/luci](https://github.com/coolsnowwolf/luci)
+* 集成 [coolsnowwolf/lede/package/lean](https://github.com/coolsnowwolf/lede/tree/master/package/lean)
 * 更新 [jerrykuku/luci-theme-argon](https://github.com/jerrykuku/luci-theme-argon)
-* 集成最新实时监控 Netdata v1.20.0
 
 ## 用法
 Fork 到自己的账号下，将 `.github/workflows` 下 `.yml` 文件中的 `runs-on: self-hosted` 改成 `runs-on: ubuntu-latest`（因为我是自己的服务器上编译，更快），编辑文件 `CHANGELOG.md` 触发编译动作。

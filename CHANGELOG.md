@@ -30,4 +30,4 @@
 * 添加 frpc 和 npc
 * 支持 Full Cone NAT
 
-official package & luci 1
+official package & luci go

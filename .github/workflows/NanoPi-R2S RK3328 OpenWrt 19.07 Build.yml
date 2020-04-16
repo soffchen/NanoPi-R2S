@@ -119,9 +119,9 @@ jobs:
           cp ../xt_FULLCONENAT/ipv4-netfilter.Kconfig kernel/net/ipv4/netfilter/Kconfig
           cp ../xt_FULLCONENAT/netfilter.Kconfig kernel/net/netfilter/Kconfig
 
-          git clone https://github.com/openwrt/openwrt
-          rm -rf friendlywrt/package/libs
-          cp -r openwrt/package/libs friendlywrt/package/
+          #git clone https://github.com/openwrt/openwrt
+          #rm -rf friendlywrt/package/libs
+          #cp -r openwrt/package/libs friendlywrt/package/
           
           sed -i '/CONFIG_IB/d;/CONFIG_SDK/d;/CONFIG_BUILDBOT/d;/CONFIG_ALL_KMODS/d;/CONFIG_ALL_NONSHARED/d' configs/config_rk3328
           sed -i '/docker/Id;/CONFIG_DISPLAY_SUPPORT/d;/CONFIG_AUDIO_SUPPORT/d' configs/config_rk3328

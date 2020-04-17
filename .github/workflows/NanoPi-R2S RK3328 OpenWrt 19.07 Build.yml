@@ -52,6 +52,8 @@ jobs:
           git clone https://github.com/coolsnowwolf/lede
           cd friendlywrt
           cp -r ../lede/package/lean package/
+          sed -i 's/^src-git luci.*/src-git luci https:\/\/github.com\/coolsnowwolf\/luci/' feeds.conf.default
+          sed -i 's/^src-git packages.*/src-git packages https:\/\/github.com\/coolsnowwolf\/packages/' feeds.conf.default
 
       - name: Install Extra Packages
         run: |
@@ -64,7 +66,7 @@ jobs:
           rm -rf helloworld/
 
           rm -rf lean/luci-theme-argon
-          git clone https://github.com/jerrykuku/luci-theme-argon
+          git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git
 
           git clone https://github.com/vernesong/OpenClash
           mv OpenClash/luci-app-openclash/ .
@@ -105,6 +107,8 @@ jobs:
           #cp ../patches/31-usb_wifi friendlywrt/package/base-files/files/etc/hotplug.d/usb/31-usb_wifi
 
           sed -i "/redirect_https/d" friendlywrt/package/network/services/uhttpd/files/uhttpd.config
+          sed -i '/Load Average/i\\t\t<tr><td width="33%"><%:CPU Temperature%></td><td><%=luci.sys.exec("cut -c1-2 /sys/class/thermal/thermal_zone0/temp")%></td></tr>' friendlywrt/feeds/luci/modules/luci-mod-admin-full/luasrc/view/admin_status/index.htm
+          sed -i 's/pcdata(boardinfo.system or "?")/"ARMv8"/' friendlywrt/feeds/luci/modules/luci-mod-admin-full/luasrc/view/admin_status/index.htm
 
       - name: Patch Kernel
         run: |

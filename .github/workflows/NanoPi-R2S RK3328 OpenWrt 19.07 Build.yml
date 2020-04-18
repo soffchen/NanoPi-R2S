@@ -74,20 +74,15 @@ jobs:
           
       - name: Install Clash Binaries
         run: |
-          mkdir -p friendlywrt-rk3328/friendlywrt/package/base-files/files/etc/clash
-          cd friendlywrt-rk3328/friendlywrt/package/base-files/files/etc/clash
-          wget https://github.com/Dreamacro/clash/releases/download/v0.19.0/clash-linux-armv8-v0.19.0.gz
-          gunzip clash-linux-armv8-v0.19.0.gz
-          chmod +x clash-linux-armv8-v0.19.0
-          mv clash-linux-armv8-v0.19.0 clash
-          mkdir -p ../openclash/core
-          cp clash ../openclash/core/
+          cd friendlywrt-rk3328/friendlywrt/package/base-files/files
+          mkdir -p etc/clash
+          wget -qO- https://github.com/Dreamacro/clash/releases/download/v0.19.0/clash-linux-armv8-v0.19.0.gz | gunzip -c > etc/clash/clash
 
-      - name: Set Clash Version
-        run: |
-          mkdir -p friendlywrt-rk3328/friendlywrt/package/base-files/files/usr/share/clash
-          cd friendlywrt-rk3328/friendlywrt/package/base-files/files/usr/share/clash
-          echo 0.19.0 > core_version
+          mkdir -p etc/openclash/core
+          cp etc/clash/clash etc/openclash/core/
+
+          mkdir -p usr/share/clash
+          echo 0.19.0 > usr/share/clash/core_version
 
       - name: Update Target.mk
         run: |
@@ -123,7 +118,7 @@ jobs:
           rm -f friendlywrt-rk3328/friendlywrt/.config*
           cp r2s-rk3328-config friendlywrt-rk3328/configs/config_rk3328
 
-      - name: Setting Defaults
+      - name: Set Default Values
         run: |
           cd friendlywrt-rk3328/friendlywrt
           sed -i '/uci commit luci/i\uci set luci.main.mediaurlbase=/luci-static/argon' package/lean/default-settings/files/zzz-default-settings

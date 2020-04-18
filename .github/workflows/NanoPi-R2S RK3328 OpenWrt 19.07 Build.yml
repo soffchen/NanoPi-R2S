@@ -72,6 +72,10 @@ jobs:
           mv OpenClash/luci-app-openclash/ .
           rm -rf OpenClash/
           
+          git clone https://github.com/songchenwen/nanopi-r2s
+          mv nanopi-r2s/luci-app-r2sflasher/ .
+          rm -rf nanopi-r2s/
+          
       - name: Install Clash Binaries
         run: |
           cd friendlywrt-rk3328/friendlywrt/package/base-files/files
@@ -132,6 +136,19 @@ jobs:
           cd friendlywrt-rk3328
           sed -i 's/set -eu/set -u/' scripts/mk-friendlywrt.sh
           ./build.sh nanopi_r2s.mk
+
+      - name: Fix Rootfs Owner and Group
+        run: |
+          sudo df -lh
+          lodev=$(sudo losetup -f)
+          echo "found unused loop dev $lodev"
+          sudo losetup -o 100663296 $lodev friendlywrt-rk3328/out/*.img
+          sudo rm -rf /mnt/friendlywrt-tmp
+          sudo mkdir -p /mnt/friendlywrt-tmp
+          sudo mount $lodev /mnt/friendlywrt-tmp
+          sudo chown -R root:root /mnt/friendlywrt-tmp
+          sudo umount /mnt/friendlywrt-tmp
+          sudo losetup -d $lodev
 
       - name: Assemble Artifact
         run: |

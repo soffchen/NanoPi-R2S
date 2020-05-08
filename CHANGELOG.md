@@ -1,3 +1,7 @@
+## 20200508
+* 集成 smartdns
+* 集成 luci-app-smartdns
+
 ## 20200418
 * 集成 luci-app-r2sflasher
 

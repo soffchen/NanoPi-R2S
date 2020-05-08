@@ -76,6 +76,14 @@ jobs:
           mv nanopi-r2s/luci-app-r2sflasher/ .
           rm -rf nanopi-r2s/
           
+          git clone https://github.com/pymumu/smartdns.git
+          mv smartdns smartdns1
+          mv smartdns1/package/openwrt .
+          mv openwrt smartdns
+          rm -rf smartdns1
+          
+          cp -r ../../../package/luci-app-smartdns .
+          
       - name: Install Clash Binaries
         run: |
           cd friendlywrt-rk3328/friendlywrt/package/base-files/files

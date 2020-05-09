@@ -58,8 +58,10 @@ jobs:
       - name: Install Extra Packages
         run: |
           cd friendlywrt-rk3328/friendlywrt/package
+
           git clone https://github.com/frainzy1477/luci-app-clash
           sed -i 's/SUBMENU:=2. Clash/SUBMENU:=3. Applications/' luci-app-clash/Makefile
+
           git clone https://github.com/rufengsuixing/luci-app-adguardhome
 
           git clone https://github.com/fw876/helloworld

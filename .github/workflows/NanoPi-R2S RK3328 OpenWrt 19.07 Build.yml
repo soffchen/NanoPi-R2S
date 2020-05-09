@@ -58,7 +58,10 @@ jobs:
       - name: Install Extra Packages
         run: |
           cd friendlywrt-rk3328/friendlywrt/package
+
           git clone https://github.com/frainzy1477/luci-app-clash
+          sed -i 's/SUBMENU:=2. Clash/SUBMENU:=3. Applications/' luci-app-clash/Makefile
+
           git clone https://github.com/rufengsuixing/luci-app-adguardhome
 
           git clone https://github.com/fw876/helloworld
@@ -89,6 +92,7 @@ jobs:
           cd friendlywrt-rk3328/friendlywrt/package/base-files/files
           mkdir -p etc/clash
           wget -qO- https://github.com/Dreamacro/clash/releases/download/v0.20.0/clash-linux-armv8-v0.20.0.gz | gunzip -c > etc/clash/clash
+          chmod +x etc/clash/clash
 
           mkdir -p etc/openclash/core
           cp etc/clash/clash etc/openclash/core/

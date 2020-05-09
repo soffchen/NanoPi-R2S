@@ -1,3 +1,8 @@
+##20200509
+*1.修复clash未赋予执行权限导致固件无法启动核心的问题
+*2.修复luci-app-clash的SUBMEN问题，把luci-app-clash统一放到LUCI-Applcalion目录
+*3.更新clash二进制文件到最新的0.20.0
+
 ## 20200508
 * 集成 smartdns
 * 集成 luci-app-smartdns

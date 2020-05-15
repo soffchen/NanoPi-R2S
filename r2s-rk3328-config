@@ -4568,7 +4568,7 @@ CONFIG_PACKAGE_libogg=y
 # CONFIG_PACKAGE_libopensc is not set
 # CONFIG_PACKAGE_libopenzwave is not set
 # CONFIG_PACKAGE_liboping is not set
-# CONFIG_PACKAGE_libopus is not set
+CONFIG_PACKAGE_libopus=y
 # CONFIG_PACKAGE_libout123 is not set
 # CONFIG_PACKAGE_libowfat is not set
 # CONFIG_PACKAGE_libp11 is not set
@@ -4736,11 +4736,6 @@ CONFIG_PACKAGE_luci=y
 # CONFIG_PACKAGE_luci-ssl-openssl is not set
 
 #
-# 2. Clash
-#
-# CONFIG_PACKAGE_luci-app-clash is not set
-
-#
 # 2. Modules
 #
 CONFIG_PACKAGE_luci-base=y
@@ -4808,6 +4803,7 @@ CONFIG_PACKAGE_luci-app-autoreboot=y
 # CONFIG_PACKAGE_luci-app-cifsd is not set
 # CONFIG_PACKAGE_luci-app-cjdns is not set
 # CONFIG_PACKAGE_luci-app-clamav is not set
+# CONFIG_PACKAGE_luci-app-clash is not set
 CONFIG_PACKAGE_luci-app-commands=y
 # CONFIG_PACKAGE_luci-app-cshark is not set
 CONFIG_PACKAGE_luci-app-ddns=y
@@ -4873,6 +4869,7 @@ CONFIG_PACKAGE_luci-app-qos=y
 CONFIG_PACKAGE_luci-app-r2sflasher=y
 # CONFIG_PACKAGE_luci-app-radicale is not set
 CONFIG_PACKAGE_luci-app-ramfree=y
+# CONFIG_PACKAGE_luci-app-rclone is not set
 # CONFIG_PACKAGE_luci-app-rp-pppoe-server is not set
 CONFIG_PACKAGE_luci-app-samba=y
 # CONFIG_PACKAGE_luci-app-samba4 is not set
@@ -5256,6 +5253,7 @@ CONFIG_PACKAGE_luci-i18n-samba-en=y
 CONFIG_PACKAGE_luci-i18n-samba-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-samba-zh-tw is not set
 CONFIG_PACKAGE_luci-i18n-smartdns-zh-cn=y
+CONFIG_PACKAGE_luci-i18n-ssr-plus-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-statistics-ca is not set
 # CONFIG_PACKAGE_luci-i18n-statistics-cs is not set
 # CONFIG_PACKAGE_luci-i18n-statistics-de is not set
@@ -5285,6 +5283,7 @@ CONFIG_PACKAGE_luci-i18n-ttyd-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-uhttpd-ja is not set
 # CONFIG_PACKAGE_luci-i18n-uhttpd-pt-br is not set
 # CONFIG_PACKAGE_luci-i18n-uhttpd-ru is not set
+CONFIG_PACKAGE_luci-i18n-uhttpd-zh-cn=y
 CONFIG_PACKAGE_luci-i18n-unblockmusic-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-upnp-ca is not set
 # CONFIG_PACKAGE_luci-i18n-upnp-cs is not set
@@ -5478,6 +5477,11 @@ CONFIG_PACKAGE_xupnpd=y
 # CONFIG_PACKAGE_wifidog-ng-openssl is not set
 # CONFIG_PACKAGE_wifidog-ng-wolfssl is not set
 # CONFIG_PACKAGE_wifidog-tls is not set
+
+#
+# Cloud Manager
+#
+# CONFIG_PACKAGE_rclone-webui-react is not set
 
 #
 # Download Manager
@@ -5818,6 +5822,8 @@ CONFIG_V2RAY_EXCLUDE_ASSETS=y
 # CONFIG_V2RAY_COMPRESS_UPX is not set
 CONFIG_V2RAY_DISABLE_NONE=y
 # CONFIG_V2RAY_DISABLE_CUSTOM is not set
+CONFIG_PACKAGE_v2ray-plugin=y
+# CONFIG_v2ray-plugin_INCLUDE_GOPROXY is not set
 
 #
 # Routing and Redirection
@@ -6451,7 +6457,6 @@ CONFIG_PACKAGE_udpxy=y
 CONFIG_PACKAGE_umbim=y
 # CONFIG_PACKAGE_umdns is not set
 # CONFIG_PACKAGE_usbip is not set
-CONFIG_PACKAGE_v2ray-plugin=y
 # CONFIG_PACKAGE_vallumd is not set
 # CONFIG_PACKAGE_verysync is not set
 CONFIG_PACKAGE_vlmcsd=y
@@ -6553,11 +6558,12 @@ CONFIG_PACKAGE_uboot-envtools=y
 # CONFIG_PACKAGE_bsdtar is not set
 CONFIG_PACKAGE_bzip2=y
 CONFIG_PACKAGE_gzip=y
-# CONFIG_PACKAGE_lzmadec is not set
-# CONFIG_PACKAGE_lzmainfo is not set
+# CONFIG_PACKAGE_pigz is not set
 # CONFIG_PACKAGE_unrar is not set
 CONFIG_PACKAGE_unzip=y
 CONFIG_PACKAGE_xz-utils=y
+# CONFIG_PACKAGE_lzmadec is not set
+# CONFIG_PACKAGE_lzmainfo is not set
 CONFIG_PACKAGE_xz=y
 # CONFIG_PACKAGE_xzdec is not set
 # CONFIG_PACKAGE_xzdiff is not set
@@ -7096,6 +7102,7 @@ CONFIG_PACKAGE_openssl-util=y
 CONFIG_PACKAGE_pv=y
 CONFIG_PACKAGE_qmi-utils=y
 # CONFIG_PACKAGE_qrencode is not set
+# CONFIG_PACKAGE_rclone is not set
 # CONFIG_PACKAGE_relayctl is not set
 # CONFIG_PACKAGE_rename is not set
 # CONFIG_PACKAGE_rng-tools is not set

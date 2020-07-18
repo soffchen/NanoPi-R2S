@@ -91,14 +91,14 @@ jobs:
         run: |
           cd friendlywrt-rk3328/friendlywrt/package/base-files/files
           mkdir -p etc/clash
-          wget -qO- https://github.com/Dreamacro/clash/releases/download/v0.20.0/clash-linux-armv8-v0.20.0.gz | gunzip -c > etc/clash/clash
+          wget -qO- https://github.com/Dreamacro/clash/releases/download/v1.0.0/clash-linux-armv8-v1.0.0.gz | gunzip -c > etc/clash/clash
           chmod +x etc/clash/clash
 
           mkdir -p etc/openclash/core
           cp etc/clash/clash etc/openclash/core/
 
           mkdir -p usr/share/clash
-          echo 0.20.0 > usr/share/clash/core_version
+          echo 1.0.0 > usr/share/clash/core_version
 
       - name: Update Target.mk
         run: |

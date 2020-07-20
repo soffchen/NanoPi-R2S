@@ -1,7 +1,6 @@
 # 使用 Github Actions 在线编译 NanoPi-R2S 固件
 
-* NanoPi R2S 购买链接: [https://s.click.taobao.com/rFvYQpv](https://s.click.taobao.com/rFvYQpv)
-* 降温外壳、风扇推荐: [https://item.taobao.com/item.htm?id=614834177074](https://item.taobao.com/item.htm?id=614834177074)
+* NanoPi R2S CNC 官方金属壳版 购买链接: [https://s.click.taobao.com/ZPSFRyu](https://s.click.taobao.com/ZPSFRyu) 
 
 ## 说明
 * IP: 192.168.2.1

@@ -3,8 +3,8 @@
 * NanoPi R2S CNC 官方金属壳版 购买链接: [https://s.click.taobao.com/ZPSFRyu](https://s.click.taobao.com/ZPSFRyu) 
 
 ## 说明
-* IP: 192.168.2.1
-* 密码: password
+* 管理 IP: 192.168.2.1
+* 默认管理密码: password
 
 ## 特色
 * 支持 RTL8821CU/RTL8822BU 芯片的 USB WiFi 设备，已知支持列表：

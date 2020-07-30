@@ -58,4 +58,4 @@
 * 添加 frpc 和 npc
 * 支持 Full Cone NAT
 
-test new action 2
+test new action 3

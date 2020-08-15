@@ -114,7 +114,7 @@ jobs:
         run: |		
           cd friendlywrt-rk3328/friendlywrt		
           ./scripts/feeds update -a		
-          ./scripts/feeds install -a -p node
+          ./scripts/feeds install -a
 
       - name: Install Mods
         run: |

@@ -4641,6 +4641,7 @@ CONFIG_PACKAGE_libid3tag=y
 # CONFIG_PACKAGE_libipfs-http-client is not set
 # CONFIG_PACKAGE_libiw is not set
 CONFIG_PACKAGE_libiwinfo=y
+CONFIG_PACKAGE_libjpeg-turbo=y
 CONFIG_PACKAGE_libjson-c=y
 # CONFIG_PACKAGE_libkeyutils is not set
 # CONFIG_PACKAGE_libkmod is not set
@@ -4987,7 +4988,6 @@ CONFIG_PACKAGE_luci-app-autoreboot=y
 # CONFIG_PACKAGE_luci-app-cifsd is not set
 # CONFIG_PACKAGE_luci-app-cjdns is not set
 # CONFIG_PACKAGE_luci-app-clamav is not set
-# CONFIG_PACKAGE_luci-app-clash is not set
 CONFIG_PACKAGE_luci-app-commands=y
 # CONFIG_PACKAGE_luci-app-cshark is not set
 CONFIG_PACKAGE_luci-app-ddns=y
@@ -4996,8 +4996,6 @@ CONFIG_PACKAGE_luci-app-ddns=y
 # CONFIG_PACKAGE_luci-app-diskman_INCLUDE_btrfs_progs is not set
 # CONFIG_PACKAGE_luci-app-diskman_INCLUDE_lsblk is not set
 # CONFIG_PACKAGE_luci-app-diskman_INCLUDE_mdadm is not set
-# CONFIG_PACKAGE_luci-app-diskman_INCLUDE_kmod_md_raid456 is not set
-# CONFIG_PACKAGE_luci-app-diskman_INCLUDE_kmod_md_linear is not set
 # CONFIG_PACKAGE_luci-app-dnscrypt-proxy is not set
 # CONFIG_PACKAGE_luci-app-dnsforwarder is not set
 CONFIG_PACKAGE_luci-app-docker=y
@@ -5108,6 +5106,11 @@ CONFIG_PACKAGE_luci-app-wol=y
 # CONFIG_PACKAGE_luci-app-wrtbwmon is not set
 # CONFIG_PACKAGE_luci-app-xlnetacc is not set
 CONFIG_PACKAGE_luci-app-zerotier=y
+
+#
+# 3. Applications For OpenWRT
+#
+# CONFIG_PACKAGE_luci-app-clash is not set
 
 #
 # 4. Themes
@@ -6700,6 +6703,7 @@ CONFIG_PACKAGE_smartdns=y
 # CONFIG_PACKAGE_tayga is not set
 # CONFIG_PACKAGE_tcpdump is not set
 # CONFIG_PACKAGE_tcpdump-mini is not set
+CONFIG_PACKAGE_tcping=y
 CONFIG_PACKAGE_tcpping=y
 # CONFIG_PACKAGE_tgt is not set
 # CONFIG_PACKAGE_tor is not set
@@ -6964,6 +6968,7 @@ CONFIG_PACKAGE_mkf2fs=y
 #
 # Image Manipulation
 #
+# CONFIG_PACKAGE_libjpeg-turbo-utils is not set
 # CONFIG_PACKAGE_tiff-utils is not set
 
 #

@@ -40,15 +40,15 @@ jobs:
 
       - name: Download Source
         run: |
-          rm -rf friendlywrt-rk3328
-          mkdir friendlywrt-rk3328
-          cd friendlywrt-rk3328
+          rm -rf code
+          mkdir code
+          cd code
           repo init -u https://github.com/friendlyarm/friendlywrt_manifests -b master-v19.07.1 -m rk3328.xml --repo-url=https://github.com/friendlyarm/repo --no-clone-bundle
           repo sync -c --no-clone-bundle -j8
 
       - name: Merge LEDE
         run: |
-          cd friendlywrt-rk3328
+          cd code
           git clone https://github.com/coolsnowwolf/lede
           cd friendlywrt
           cp -r ../lede/package/lean package/
@@ -58,7 +58,7 @@ jobs:
 
       - name: Install Extra Packages
         run: |
-          cd friendlywrt-rk3328/friendlywrt/package
+          cd code/friendlywrt/package
 
           git clone https://github.com/frainzy1477/luci-app-clash
           sed -i 's/SUBMENU:=2. Clash/SUBMENU:=3. Applications/' luci-app-clash/Makefile
@@ -66,7 +66,7 @@ jobs:
           git clone https://github.com/rufengsuixing/luci-app-adguardhome
 
           git clone https://github.com/fw876/helloworld
-          mv helloworld/luci-app-ssr-plus/ .
+          mv helloworld/* .
           rm -rf helloworld/
 
           rm -rf lean/luci-theme-argon
@@ -94,7 +94,7 @@ jobs:
           
       - name: Install Clash Binaries
         run: |
-          cd friendlywrt-rk3328/friendlywrt/package/base-files/files
+          cd code/friendlywrt/package/base-files/files
           mkdir -p etc/clash
           wget -qO- https://github.com/Dreamacro/clash/releases/download/v1.0.0/clash-linux-armv8-v1.0.0.gz | gunzip -c > etc/clash/clash
           chmod +x etc/clash/clash
@@ -107,18 +107,18 @@ jobs:
 
       - name: Update Target.mk
         run: |
-          cd friendlywrt-rk3328/friendlywrt/include
+          cd code/friendlywrt/include
           sed -i 's/dnsmasq /dnsmasq-full default-settings luci /' target.mk
 
       - name: Update Feeds		
         run: |		
-          cd friendlywrt-rk3328/friendlywrt		
+          cd code/friendlywrt		
           ./scripts/feeds update -a		
           ./scripts/feeds install -a
 
       - name: Install Mods
         run: |
-          cd friendlywrt-rk3328
+          cd code
 
           sed -i '/STAMP_BUILT/d' friendlywrt/feeds/packages/utils/runc/Makefile
           sed -i '/STAMP_BUILT/d' friendlywrt/feeds/packages/utils/containerd/Makefile
@@ -135,26 +135,26 @@ jobs:
 
       - name: Patch Kernel
         run: |
-          cd friendlywrt-rk3328/kernel/
+          cd code/kernel/
           git apply ../../patches/001-add-full_cone_nat.patch
 
       - name: Custom Configure Files
         run: |
-          rm -f friendlywrt-rk3328/friendlywrt/.config*
-          cp r2s-rk3328-config friendlywrt-rk3328/configs/config_rk3328
+          rm -f code/friendlywrt/.config*
+          cp r2s-rk3328-config code/configs/config_rk3328
 
       - name: Set Default Values
         run: |
-          cd friendlywrt-rk3328/friendlywrt
+          cd code/friendlywrt
           sed -i '/uci commit luci/i\uci set luci.main.mediaurlbase=/luci-static/argon' package/lean/default-settings/files/zzz-default-settings
            
       - name: Install UPX
         run: |
-          ln -s /usr/bin/upx-ucl friendlywrt-rk3328/friendlywrt/staging_dir/host/bin/upx
+          ln -s /usr/bin/upx-ucl code/friendlywrt/staging_dir/host/bin/upx
 
       - name: Build OpenWrt
         run: |
-          cd friendlywrt-rk3328
+          cd code
           sed -i 's/set -eu/set -u/' scripts/mk-friendlywrt.sh
           ./build.sh nanopi_r2s.mk
 
@@ -163,7 +163,7 @@ jobs:
           sudo df -lh
           lodev=$(sudo losetup -f)
           echo "found unused loop dev $lodev"
-          sudo losetup -o 100663296 $lodev friendlywrt-rk3328/out/*.img
+          sudo losetup -o 100663296 $lodev code/out/*.img
           sudo rm -rf /mnt/friendlywrt-tmp
           sudo mkdir -p /mnt/friendlywrt-tmp
           sudo mount $lodev /mnt/friendlywrt-tmp
@@ -176,10 +176,10 @@ jobs:
           rm -rf ./artifact/
           mkdir -p ./artifact/
 
-          find friendlywrt-rk3328/out/ -name "FriendlyWrt_*img*" | xargs -I{} sh -c 'f=$(basename $1); zip -r -j "./artifact/${f}.zip" $1' sh {} \;
-          #find friendlywrt-rk3328/friendlywrt/bin/targets/rockchip-rk3328/generic -name "openwrt*-squashfs.img" | xargs -I{} sh -c 'f=$(basename $1); zip -r -j "./artifact/${f}.zip" $1' sh {} \;
+          find code/out/ -name "FriendlyWrt_*img*" | xargs -I{} sh -c 'f=$(basename $1); zip -r -j "./artifact/${f}.zip" $1' sh {} \;
+          #find code/friendlywrt/bin/targets/rockchip-rk3328/generic -name "openwrt*-squashfs.img" | xargs -I{} sh -c 'f=$(basename $1); zip -r -j "./artifact/${f}.zip" $1' sh {} \;
           
-          cp friendlywrt-rk3328/friendlywrt/.config ./artifact/
+          cp code/friendlywrt/.config ./artifact/
 
       - name: Upload Artifact
         uses: actions/upload-artifact@master

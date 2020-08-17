@@ -1,3 +1,6 @@
+## 20200817
+* Clash 更新到 v1.1.0
+
 ## 20200815
 * 开启 luci-app-adguardhome
 * 开启 luci-app-jd-dailybonus

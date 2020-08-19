@@ -10,8 +10,7 @@
 * 支持 RTL8821CU/RTL8822BU 芯片的 USB WiFi 设备，已知支持列表：
     - [COMFAST 726B](https://u.jd.com/KmtGTP)
     - [COMFAST CF-759BF](https://u.jd.com/AiZit7)
-* 集成 [frainzy1477/luci-app-clash](https://github.com/frainzy1477/luci-app-clash) 及其 clash bin（CONFIG_PACKAGE_luci-app-clash 默认没开启）
-* 集成 [vernesong/OpenClash](https://github.com/vernesong/OpenClash) 及其 clash bin
+* 集成 [vernesong/OpenClash](https://github.com/vernesong/OpenClash) 及其 core/tun/game binaries
 * 集成 [rufengsuixing/luci-app-adguardhome](https://github.com/rufengsuixing/luci-app-adguardhome)
 * 集成 [coolsnowwolf/packages](https://github.com/coolsnowwolf/packages), [coolsnowwolf/luci](https://github.com/coolsnowwolf/luci) 与 [coolsnowwolf/lede/package/lean](https://github.com/coolsnowwolf/lede/tree/master/package/lean)
 * 更新 [jerrykuku/luci-theme-argon](https://github.com/jerrykuku/luci-theme-argon)

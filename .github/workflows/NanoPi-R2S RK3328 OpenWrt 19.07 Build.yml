@@ -95,15 +95,11 @@ jobs:
       - name: Install Clash Binaries
         run: |
           cd code/friendlywrt/package/base-files/files
-          mkdir -p etc/clash
-          wget -qO- https://github.com/Dreamacro/clash/releases/download/v1.1.0/clash-linux-armv8-v1.1.0.gz | gunzip -c > etc/clash/clash
-          chmod +x etc/clash/clash
-
           mkdir -p etc/openclash/core
-          cp etc/clash/clash etc/openclash/core/
-
-          mkdir -p usr/share/clash
-          echo 1.1.0 > usr/share/clash/core_version
+          wget -qO- https://github.com/Dreamacro/clash/releases/download/v1.1.0/clash-linux-armv8-v1.1.0.gz | gunzip -c > etc/openclash/core/clash
+          wget -qO- https://github.com/vernesong/OpenClash/releases/download/TUN-Premium/clash-linux-armv7-2020.08.13.g827ef84.gz | gunzip -c > etc/openclash/core/clash_tun
+          wget -qO- https://github.com/vernesong/OpenClash/releases/download/TUN/clash-linux-armv7.tar.gz | tar xOvz > etc/openclash/core/clash_game
+          chmod +x etc/openclash/core/clash*
 
       - name: Update Target.mk
         run: |

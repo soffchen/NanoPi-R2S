@@ -3403,7 +3403,7 @@ CONFIG_PACKAGE_lua=y
 # CONFIG_PACKAGE_luarocks is not set
 # CONFIG_PACKAGE_luasec is not set
 # CONFIG_PACKAGE_luasoap is not set
-# CONFIG_PACKAGE_luasocket is not set
+CONFIG_PACKAGE_luasocket=y
 # CONFIG_PACKAGE_luasocket5.3 is not set
 # CONFIG_PACKAGE_luasql-mysql is not set
 # CONFIG_PACKAGE_luasql-pgsql is not set
@@ -5106,11 +5106,6 @@ CONFIG_PACKAGE_luci-app-wol=y
 # CONFIG_PACKAGE_luci-app-wrtbwmon is not set
 # CONFIG_PACKAGE_luci-app-xlnetacc is not set
 CONFIG_PACKAGE_luci-app-zerotier=y
-
-#
-# 3. Applications For OpenWRT
-#
-# CONFIG_PACKAGE_luci-app-clash is not set
 
 #
 # 4. Themes

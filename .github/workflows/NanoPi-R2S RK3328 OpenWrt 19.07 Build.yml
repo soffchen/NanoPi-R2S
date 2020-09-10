@@ -94,7 +94,7 @@ jobs:
           cd code/friendlywrt/package/base-files/files
           mkdir -p etc/openclash/core
           wget -qO- https://github.com/Dreamacro/clash/releases/download/v1.1.0/clash-linux-armv8-v1.1.0.gz | gunzip -c > etc/openclash/core/clash
-          wget -qO- https://github.com/vernesong/OpenClash/releases/download/TUN-Premium/clash-linux-armv7-2020.08.13.g827ef84.gz | gunzip -c > etc/openclash/core/clash_tun
+          wget -qO- https://github.com/vernesong/OpenClash/releases/download/TUN-Premium/clash-linux-armv7-2020.09.05.gaf1a58d.gz | gunzip -c > etc/openclash/core/clash_tun
           wget -qO- https://github.com/vernesong/OpenClash/releases/download/TUN/clash-linux-armv7.tar.gz | tar xOvz > etc/openclash/core/clash_game
           chmod +x etc/openclash/core/clash*
 

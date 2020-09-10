@@ -1,5 +1,6 @@
 ## 20200909
 * 更新 SmartDNS
+* 更新 Clash
 
 ## 20200819
 * 移除 luci-app-clash

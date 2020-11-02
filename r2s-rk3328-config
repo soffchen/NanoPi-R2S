@@ -2381,6 +2381,7 @@ CONFIG_PACKAGE_urngd=y
 # CONFIG_ZABBIX_OPENSSL is not set
 # CONFIG_ZABBIX_GNUTLS is not set
 CONFIG_ZABBIX_NOSSL=y
+# CONFIG_PACKAGE_zabbix-extra-mac80211 is not set
 # CONFIG_PACKAGE_zabbix-extra-network is not set
 # CONFIG_PACKAGE_zabbix-extra-wifi is not set
 # CONFIG_PACKAGE_zabbix-get is not set
@@ -3277,7 +3278,10 @@ CONFIG_PACKAGE_kmod-cfg80211=y
 # CONFIG_PACKAGE_kmod-libertas-spi is not set
 # CONFIG_PACKAGE_kmod-libertas-usb is not set
 # CONFIG_PACKAGE_kmod-libipw is not set
-# CONFIG_PACKAGE_kmod-mac80211 is not set
+CONFIG_PACKAGE_kmod-mac80211=y
+CONFIG_PACKAGE_MAC80211_DEBUGFS=y
+# CONFIG_PACKAGE_MAC80211_TRACING is not set
+CONFIG_PACKAGE_MAC80211_MESH=y
 # CONFIG_PACKAGE_kmod-mac80211-hwsim is not set
 # CONFIG_PACKAGE_kmod-mt76 is not set
 # CONFIG_PACKAGE_kmod-mt7601u is not set
@@ -3469,6 +3473,7 @@ CONFIG_NODEJS_ICU_NONE=y
 # CONFIG_PACKAGE_node-homebridge is not set
 # CONFIG_PACKAGE_node-homebridge-camera-ffmpeg is not set
 # CONFIG_PACKAGE_node-homebridge-cmd4 is not set
+# CONFIG_PACKAGE_node-homebridge-config-ui-x is not set
 # CONFIG_PACKAGE_node-i2c-bus is not set
 # CONFIG_PACKAGE_node-ibmiotf is not set
 # CONFIG_PACKAGE_node-ideino-linino-lib is not set
@@ -3482,6 +3487,7 @@ CONFIG_NODEJS_ICU_NONE=y
 # CONFIG_PACKAGE_node-levelup is not set
 # CONFIG_PACKAGE_node-logfmt is not set
 # CONFIG_PACKAGE_node-lwm2m-node-lib is not set
+# CONFIG_PACKAGE_node-mdns is not set
 # CONFIG_PACKAGE_node-megahash is not set
 # CONFIG_PACKAGE_node-mocha is not set
 # CONFIG_PACKAGE_node-mqtt is not set
@@ -3496,6 +3502,7 @@ CONFIG_NODEJS_ICU_NONE=y
 # CONFIG_PACKAGE_node-npm is not set
 # CONFIG_PACKAGE_node-npm-check-updates is not set
 # CONFIG_PACKAGE_node-onoff is not set
+# CONFIG_PACKAGE_node-openzwave-shared is not set
 # CONFIG_PACKAGE_node-pi-spi is not set
 # CONFIG_PACKAGE_node-pm2 is not set
 # CONFIG_PACKAGE_node-pty is not set
@@ -3505,7 +3512,6 @@ CONFIG_NODEJS_ICU_NONE=y
 # CONFIG_PACKAGE_node-red-contrib-homekit is not set
 # CONFIG_PACKAGE_node-red-contrib-modbus is not set
 # CONFIG_PACKAGE_node-red-node-arduino is not set
-CONFIG_PACKAGE_node-request=y
 # CONFIG_PACKAGE_node-reverse-wstunnel is not set
 # CONFIG_PACKAGE_node-rimraf is not set
 # CONFIG_PACKAGE_node-rpi-gpio is not set
@@ -4513,7 +4519,8 @@ CONFIG_PACKAGE_libblkid=y
 CONFIG_PACKAGE_libblobmsg-json=y
 # CONFIG_PACKAGE_libbsd is not set
 CONFIG_PACKAGE_libcap=y
-# CONFIG_PACKAGE_libcap-bin is not set
+CONFIG_PACKAGE_libcap-bin=y
+CONFIG_PACKAGE_libcap-bin-capsh-shell="/bin/sh"
 CONFIG_PACKAGE_libcap-ng=y
 # CONFIG_PACKAGE_libcap-ng-bin is not set
 CONFIG_PACKAGE_libcares=y
@@ -5023,6 +5030,7 @@ CONFIG_PACKAGE_luci-app-frpc=y
 # CONFIG_PACKAGE_luci-app-haproxy-tcp is not set
 CONFIG_PACKAGE_luci-app-hd-idle=y
 # CONFIG_PACKAGE_luci-app-hnet is not set
+# CONFIG_PACKAGE_luci-app-https-dns-proxy is not set
 CONFIG_PACKAGE_luci-app-ipsec-vpnd=y
 CONFIG_PACKAGE_luci-app-jd-dailybonus=y
 # CONFIG_PACKAGE_luci-app-kodexplorer is not set
@@ -6053,15 +6061,14 @@ CONFIG_PACKAGE_v2ray=y
 #
 # V2Ray Configuration
 #
-# CONFIG_V2RAY_COMPRESS_GOPROXY is not set
-# CONFIG_V2RAY_JSON_V2CTL is not set
 CONFIG_V2RAY_JSON_INTERNAL=y
+# CONFIG_V2RAY_JSON_V2CTL is not set
 # CONFIG_V2RAY_JSON_NONE is not set
+# CONFIG_V2RAY_COMPRESS_GOPROXY is not set
 CONFIG_V2RAY_EXCLUDE_V2CTL=y
 CONFIG_V2RAY_EXCLUDE_ASSETS=y
 # CONFIG_V2RAY_COMPRESS_UPX is not set
-CONFIG_V2RAY_DISABLE_NONE=y
-# CONFIG_V2RAY_DISABLE_CUSTOM is not set
+# CONFIG_V2RAY_CUSTOM_FEATURES is not set
 CONFIG_PACKAGE_v2ray-plugin=y
 # CONFIG_v2ray-plugin_INCLUDE_GOPROXY is not set
 
@@ -6418,6 +6425,7 @@ CONFIG_PACKAGE_frpc=y
 # CONFIG_PACKAGE_kcptun-client is not set
 # CONFIG_PACKAGE_kcptun-server is not set
 # CONFIG_PACKAGE_lighttpd is not set
+CONFIG_PACKAGE_microsocks=y
 CONFIG_PACKAGE_naiveproxy=y
 # CONFIG_PACKAGE_nginx is not set
 CONFIG_NGINX_NOPCRE=y
@@ -6434,6 +6442,7 @@ CONFIG_PACKAGE_pdnsd-alt=y
 # CONFIG_PACKAGE_radicale is not set
 # CONFIG_PACKAGE_radicale2 is not set
 # CONFIG_PACKAGE_radicale2-examples is not set
+CONFIG_PACKAGE_redsocks2=y
 CONFIG_PACKAGE_shadowsocks-libev-config=y
 CONFIG_PACKAGE_shadowsocks-libev-ss-local=y
 CONFIG_PACKAGE_shadowsocks-libev-ss-redir=y
@@ -6444,12 +6453,20 @@ CONFIG_PACKAGE_shadowsocks-libev-ss-redir=y
 CONFIG_PACKAGE_shadowsocksr-libev-alt=y
 # CONFIG_PACKAGE_shadowsocksr-libev-server is not set
 CONFIG_PACKAGE_shadowsocksr-libev-ssr-local=y
+CONFIG_PACKAGE_simple-obfs=y
+# CONFIG_PACKAGE_simple-obfs-server is not set
+
+#
+# Simple-obfs Compile Configuration
+#
+# CONFIG_SIMPLE_OBFS_STATIC_LINK is not set
 # CONFIG_PACKAGE_sockd is not set
 # CONFIG_PACKAGE_socksify is not set
 # CONFIG_PACKAGE_spawn-fcgi is not set
 # CONFIG_PACKAGE_squid is not set
 # CONFIG_PACKAGE_srelay is not set
 # CONFIG_PACKAGE_tinyproxy is not set
+CONFIG_PACKAGE_trojan=y
 CONFIG_PACKAGE_uhttpd=y
 # CONFIG_PACKAGE_uhttpd-mod-lua is not set
 CONFIG_PACKAGE_uhttpd-mod-ubus=y
@@ -6590,7 +6607,6 @@ CONFIG_PACKAGE_libipset=y
 # CONFIG_PACKAGE_mac-telnet-server is not set
 # CONFIG_PACKAGE_map is not set
 # CONFIG_PACKAGE_memcached is not set
-CONFIG_PACKAGE_microsocks=y
 # CONFIG_PACKAGE_mii-tool is not set
 # CONFIG_PACKAGE_mikrotik-btest is not set
 # CONFIG_PACKAGE_mini_snmpd is not set
@@ -6655,7 +6671,6 @@ CONFIG_PACKAGE_ppp-mod-radius=y
 # CONFIG_PACKAGE_radsecproxy is not set
 # CONFIG_PACKAGE_ratechecker is not set
 # CONFIG_PACKAGE_redsocks is not set
-CONFIG_PACKAGE_redsocks2=y
 # CONFIG_PACKAGE_remserial is not set
 # CONFIG_PACKAGE_restic-rest-server is not set
 # CONFIG_PACKAGE_rpcbind is not set
@@ -6681,13 +6696,6 @@ CONFIG_PACKAGE_SAMBA_MAX_DEBUG_LEVEL=-1
 # CONFIG_PACKAGE_seafile-server-fuse is not set
 # CONFIG_PACKAGE_ser2net is not set
 # CONFIG_PACKAGE_simple-adblock is not set
-CONFIG_PACKAGE_simple-obfs=y
-# CONFIG_PACKAGE_simple-obfs-server is not set
-
-#
-# Simple-obfs Compile Configuration
-#
-# CONFIG_SIMPLE_OBFS_STATIC_LINK is not set
 CONFIG_PACKAGE_smartdns=y
 # CONFIG_PACKAGE_smartsnmpd is not set
 # CONFIG_PACKAGE_smbinfo is not set
@@ -6718,7 +6726,6 @@ CONFIG_PACKAGE_tcpping=y
 # CONFIG_PACKAGE_tor-resolve is not set
 # CONFIG_PACKAGE_trafficshaper is not set
 # CONFIG_PACKAGE_travelmate is not set
-CONFIG_PACKAGE_trojan=y
 # CONFIG_PACKAGE_u2pnpd is not set
 # CONFIG_PACKAGE_uacme is not set
 CONFIG_PACKAGE_uclient-fetch=y

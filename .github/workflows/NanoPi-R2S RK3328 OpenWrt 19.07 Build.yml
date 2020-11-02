@@ -86,7 +86,6 @@ jobs:
           
           cp -r ../../../package/luci-app-smartdns .
           
-          git clone https://github.com/jerrykuku/node-request.git
           git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git
           git clone https://github.com/NateLol/luci-app-oled
           

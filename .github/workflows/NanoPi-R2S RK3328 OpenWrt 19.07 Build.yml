@@ -93,8 +93,8 @@ jobs:
         run: |
           cd code/friendlywrt/package/base-files/files
           mkdir -p etc/openclash/core
-          wget -qO- https://github.com/Dreamacro/clash/releases/download/v1.2.0/clash-linux-armv8-v1.2.0.gz | gunzip -c > etc/openclash/core/clash
-          wget -qO- https://github.com/vernesong/OpenClash/releases/download/TUN-Premium/clash-linux-armv8-2020.10.29.g5e54f48.gz | gunzip -c > etc/openclash/core/clash_tun
+          wget -qO- https://github.com/Dreamacro/clash/releases/download/v1.3.0/clash-linux-armv8-v1.3.0.gz | gunzip -c > etc/openclash/core/clash
+          wget -qO- https://github.com/vernesong/OpenClash/releases/download/TUN-Premium/clash-linux-armv8-2020.11.23.g4474306.gz | gunzip -c > etc/openclash/core/clash_tun
           wget -qO- https://github.com/vernesong/OpenClash/releases/download/TUN/clash-linux-armv8.tar.gz | tar xOvz > etc/openclash/core/clash_game
           chmod +x etc/openclash/core/clash*
 

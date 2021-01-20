@@ -25,7 +25,7 @@ jobs:
           sudo apt-get update
           sudo rm -rf /usr/share/dotnet /usr/local/lib/android/sdk
           sudo docker image prune -a -f
-          sudo apt-get -y install upx-ucl unzip
+          sudo apt-get -y install upx-ucl unzip subversion
           sudo apt-get -y purge dotnet* ghc* google* llvm* mysql* php* zulu* firefox hhvm
           sudo apt-get -y autoremove --purge          
           wget -O - https://raw.githubusercontent.com/friendlyarm/build-env-on-ubuntu-bionic/master/install.sh | bash
@@ -69,19 +69,11 @@ jobs:
           rm -rf lean/luci-theme-argon
           git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git
 
-          git clone -b master https://github.com/vernesong/OpenClash
-          mv OpenClash/luci-app-openclash/ .
-          rm -rf OpenClash/
+          svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash
           
-          git clone https://github.com/songchenwen/nanopi-r2s
-          mv nanopi-r2s/luci-app-r2sflasher/ .
-          rm -rf nanopi-r2s/
+          svn co https://github.com/songchenwen/nanopi-r2s/trunk/luci-app-r2sflasher
           
-          git clone https://github.com/pymumu/smartdns.git
-          mv smartdns smartdns1
-          mv smartdns1/package/openwrt .
-          mv openwrt smartdns
-          rm -rf smartdns1
+          svn co https://github.com/pymumu/smartdns/trunk/package/openwrt smartdns
           
           cp -r ../../../package/luci-app-smartdns .
           
@@ -122,6 +114,8 @@ jobs:
           wget -O friendlywrt/package/kernel/kmod-sched-cake/Makefile https://raw.githubusercontent.com/coolsnowwolf/lede/master/package/kernel/kmod-sched-cake-oot/Makefile
 
           #cp ../patches/31-usb_wifi friendlywrt/package/base-files/files/etc/hotplug.d/usb/31-usb_wifi
+          
+          cp ../patches/011-fix-zerotier-aes.patch friendlywrt/feeds/packages/net/zerotier/patches/
 
           sed -i "/redirect_https/d" friendlywrt/package/network/services/uhttpd/files/uhttpd.config
           sed -i '/Load Average/i\\t\t<tr><td width="33%"><%:CPU Temperature%></td><td><%=luci.sys.exec("cut -c1-2 /sys/class/thermal/thermal_zone0/temp")%><span>&#8451;</span></td></tr>' friendlywrt/feeds/luci/modules/luci-mod-admin-full/luasrc/view/admin_status/index.htm
@@ -131,7 +125,7 @@ jobs:
       - name: Patch Kernel
         run: |
           cd code/kernel/
-          git apply ../../patches/001-add-full_cone_nat.patch
+          #git apply ../../patches/001-add-full_cone_nat.patch
 
       - name: Custom Configure Files
         run: |

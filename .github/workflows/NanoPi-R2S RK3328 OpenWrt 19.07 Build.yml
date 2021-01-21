@@ -78,10 +78,7 @@ jobs:
           
           git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git
           git clone https://github.com/NateLol/luci-app-oled
-          
-          rm -rf feeds/packages/libs/libnatpmp
-          svn co https://github.com/coolsnowwolf/packages/trunk/libs/libnatpmp feeds/packages/libs/libnatpmp
-          
+        
       - name: Install Clash Binaries
         run: |
           cd code/friendlywrt/package/base-files/files
@@ -109,12 +106,15 @@ jobs:
         run: |
           cd code
 
+          rm -rf friendlywrt/feeds/packages/libs/libnatpmp
+          svn co https://github.com/coolsnowwolf/packages/trunk/libs/libnatpmp friendlywrt/feeds/packages/libs/libnatpmp
+
           sed -i '/STAMP_BUILT/d' friendlywrt/feeds/packages/utils/runc/Makefile
           sed -i '/STAMP_BUILT/d' friendlywrt/feeds/packages/utils/containerd/Makefile
           
-          wget -O friendlywrt/package/feeds/packages/zstd/Makefile https://raw.githubusercontent.com/coolsnowwolf/packages/89080f226affe0815c7fb8ff77f3f2d53058e9ec/utils/zstd/Makefile
+          #wget -O friendlywrt/package/feeds/packages/zstd/Makefile https://raw.githubusercontent.com/coolsnowwolf/packages/89080f226affe0815c7fb8ff77f3f2d53058e9ec/utils/zstd/Makefile
           wget -O friendlywrt/package/kernel/kmod-sched-cake/Makefile https://raw.githubusercontent.com/coolsnowwolf/lede/master/package/kernel/kmod-sched-cake-oot/Makefile
-          wget -O friendlywrt/package/feeds/packages/libs/libxml2/Makefile https://raw.githubusercontent.com/coolsnowwolf/packages/master/libs/libxml2/Makefile
+          wget -O friendlywrt/feeds/packages/libs/libxml2/Makefile https://raw.githubusercontent.com/coolsnowwolf/packages/master/libs/libxml2/Makefile
 
           #cp ../patches/31-usb_wifi friendlywrt/package/base-files/files/etc/hotplug.d/usb/31-usb_wifi
           

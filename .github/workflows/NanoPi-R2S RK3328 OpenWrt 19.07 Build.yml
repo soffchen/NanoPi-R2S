@@ -70,6 +70,7 @@ jobs:
           git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git
 
           svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash
+          svn co https://github.com/xiaorouji/openwrt-passwall/trunk/luci-app-passwall
           svn co https://github.com/songchenwen/nanopi-r2s/trunk/luci-app-r2sflasher
           
           svn co https://github.com/pymumu/smartdns/trunk/package/openwrt smartdns

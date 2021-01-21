@@ -70,15 +70,16 @@ jobs:
           git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git
 
           svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash
-          
           svn co https://github.com/songchenwen/nanopi-r2s/trunk/luci-app-r2sflasher
           
           svn co https://github.com/pymumu/smartdns/trunk/package/openwrt smartdns
-          
           cp -r ../../../package/luci-app-smartdns .
           
           git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git
           git clone https://github.com/NateLol/luci-app-oled
+          
+          rm -rf feeds/packages/libs/libnatpmp
+          svn co https://github.com/coolsnowwolf/packages/trunk/libs/libnatpmp feeds/packages/libs/libnatpmp
           
       - name: Install Clash Binaries
         run: |

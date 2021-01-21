@@ -113,6 +113,7 @@ jobs:
           
           wget -O friendlywrt/package/feeds/packages/zstd/Makefile https://raw.githubusercontent.com/coolsnowwolf/packages/89080f226affe0815c7fb8ff77f3f2d53058e9ec/utils/zstd/Makefile
           wget -O friendlywrt/package/kernel/kmod-sched-cake/Makefile https://raw.githubusercontent.com/coolsnowwolf/lede/master/package/kernel/kmod-sched-cake-oot/Makefile
+          wget -O friendlywrt/package/feeds/packages/libs/libxml2/Makefile https://raw.githubusercontent.com/coolsnowwolf/packages/master/libs/libxml2/Makefile
 
           #cp ../patches/31-usb_wifi friendlywrt/package/base-files/files/etc/hotplug.d/usb/31-usb_wifi
           

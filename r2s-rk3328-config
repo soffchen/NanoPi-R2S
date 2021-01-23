@@ -3341,13 +3341,13 @@ CONFIG_PACKAGE_libiwinfo-lua=y
 # CONFIG_PACKAGE_lsqlite3 is not set
 CONFIG_PACKAGE_lua=y
 # CONFIG_PACKAGE_lua-bencode is not set
-# CONFIG_PACKAGE_lua-cjson is not set
+CONFIG_PACKAGE_lua-cjson=y
 # CONFIG_PACKAGE_lua-copas is not set
 # CONFIG_PACKAGE_lua-coxpcall is not set
 # CONFIG_PACKAGE_lua-examples is not set
 # CONFIG_PACKAGE_lua-lzlib is not set
 # CONFIG_PACKAGE_lua-maxminddb is not set
-# CONFIG_PACKAGE_lua-md5 is not set
+CONFIG_PACKAGE_lua-md5=y
 # CONFIG_PACKAGE_lua-mobdebug is not set
 # CONFIG_PACKAGE_lua-mosquitto is not set
 # CONFIG_PACKAGE_lua-openssl is not set
@@ -3367,7 +3367,7 @@ CONFIG_PACKAGE_lua=y
 # CONFIG_PACKAGE_lualanes is not set
 # CONFIG_PACKAGE_luaposix is not set
 # CONFIG_PACKAGE_luarocks is not set
-# CONFIG_PACKAGE_luasec is not set
+CONFIG_PACKAGE_luasec=y
 # CONFIG_PACKAGE_luasoap is not set
 CONFIG_PACKAGE_luasocket=y
 # CONFIG_PACKAGE_luasql-mysql is not set
@@ -5083,14 +5083,13 @@ CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Shadowsocks_Server=y
 CONFIG_PACKAGE_luci-app-passwall_INCLUDE_ShadowsocksR=y
 CONFIG_PACKAGE_luci-app-passwall_INCLUDE_ShadowsocksR_Server=y
 CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Xray=y
-CONFIG_PACKAGE_luci-app-passwall_INCLUDE_V2ray=y
 CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Trojan_Plus=y
 CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Trojan_GO=y
-CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Brook=y
-CONFIG_PACKAGE_luci-app-passwall_INCLUDE_NaiveProxy=y
-CONFIG_PACKAGE_luci-app-passwall_INCLUDE_kcptun=y
+# CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Brook is not set
+# CONFIG_PACKAGE_luci-app-passwall_INCLUDE_NaiveProxy is not set
+# CONFIG_PACKAGE_luci-app-passwall_INCLUDE_kcptun is not set
 CONFIG_PACKAGE_luci-app-passwall_INCLUDE_haproxy=y
-CONFIG_PACKAGE_luci-app-passwall_INCLUDE_ChinaDNS_NG=y
+# CONFIG_PACKAGE_luci-app-passwall_INCLUDE_ChinaDNS_NG is not set
 CONFIG_PACKAGE_luci-app-passwall_INCLUDE_dns2socks=y
 CONFIG_PACKAGE_luci-app-passwall_INCLUDE_v2ray-plugin=y
 CONFIG_PACKAGE_luci-app-passwall_INCLUDE_simple-obfs=y
@@ -6386,6 +6385,7 @@ CONFIG_PACKAGE_kcptun-client=y
 # CONFIG_PACKAGE_kcptun-server is not set
 # CONFIG_PACKAGE_lighttpd is not set
 CONFIG_PACKAGE_microsocks=y
+CONFIG_PACKAGE_naiveproxy=y
 # CONFIG_PACKAGE_nginx is not set
 # CONFIG_PACKAGE_nginx-all-module is not set
 # CONFIG_PACKAGE_nginx-mod-luci is not set
@@ -6424,6 +6424,13 @@ CONFIG_PACKAGE_simple-obfs=y
 # CONFIG_PACKAGE_srelay is not set
 # CONFIG_PACKAGE_tinyproxy is not set
 CONFIG_PACKAGE_trojan=y
+CONFIG_PACKAGE_trojan-go=y
+
+#
+# Configuration
+#
+# CONFIG_TROJAN_GO_COMPRESS_GOPROXY is not set
+CONFIG_TROJAN_GO_COMPRESS_UPX=y
 CONFIG_PACKAGE_uhttpd=y
 # CONFIG_PACKAGE_uhttpd-mod-lua is not set
 CONFIG_PACKAGE_uhttpd-mod-ubus=y
@@ -6489,8 +6496,10 @@ CONFIG_PACKAGE_batctl-default=m
 # CONFIG_PACKAGE_batctl-tiny is not set
 # CONFIG_PACKAGE_beanstalkd is not set
 # CONFIG_PACKAGE_bmon is not set
+CONFIG_PACKAGE_brook=y
 # CONFIG_PACKAGE_bwm-ng is not set
 CONFIG_PACKAGE_chat=y
+CONFIG_PACKAGE_chinadns-ng=y
 # CONFIG_PACKAGE_cifsmount is not set
 # CONFIG_PACKAGE_coap-server is not set
 # CONFIG_PACKAGE_conserver is not set
@@ -6661,13 +6670,17 @@ CONFIG_PACKAGE_smartdns=y
 # CONFIG_PACKAGE_snmpd is not set
 # CONFIG_PACKAGE_snmpd-static is not set
 # CONFIG_PACKAGE_snmptrapd is not set
-# CONFIG_PACKAGE_socat is not set
+CONFIG_PACKAGE_socat=y
+# CONFIG_SOCAT_SSL is not set
 # CONFIG_PACKAGE_softflowd is not set
 # CONFIG_PACKAGE_soloscli is not set
+CONFIG_PACKAGE_ssocks=y
+# CONFIG_PACKAGE_ssocksd is not set
 # CONFIG_PACKAGE_stunnel is not set
 # CONFIG_PACKAGE_tayga is not set
-# CONFIG_PACKAGE_tcpdump is not set
+CONFIG_PACKAGE_tcpdump=y
 # CONFIG_PACKAGE_tcpdump-mini is not set
+CONFIG_PACKAGE_tcping=y
 CONFIG_PACKAGE_tcpping=y
 # CONFIG_PACKAGE_tgt is not set
 # CONFIG_PACKAGE_tor is not set
@@ -6675,6 +6688,7 @@ CONFIG_PACKAGE_tcpping=y
 # CONFIG_PACKAGE_tor-geoip is not set
 # CONFIG_PACKAGE_tor-resolve is not set
 # CONFIG_PACKAGE_travelmate is not set
+CONFIG_PACKAGE_trojan-plus=y
 # CONFIG_PACKAGE_u2pnpd is not set
 CONFIG_PACKAGE_uclient-fetch=y
 CONFIG_PACKAGE_udpxy=y

@@ -180,7 +180,8 @@ jobs:
           rm -rf ./artifact/
           mkdir -p ./artifact/
 
-          find code/out/ -name "FriendlyWrt_*img*" | xargs -I{} sh -c 'f=$(basename $1); zip -r -j "./artifact/${f}.zip" $1' sh {} \;
+          #find code/out/ -name "FriendlyWrt_*img" | xargs -I{} sh -c 'f=$(basename $1); zip -r -j "./artifact/${f}.zip" $1' sh {} \;
+          cp code/out/*.img.zip ./artifact/
           #find code/friendlywrt/bin/targets/rockchip-rk3328/generic -name "openwrt*-squashfs.img" | xargs -I{} sh -c 'f=$(basename $1); zip -r -j "./artifact/${f}.zip" $1' sh {} \;
           
           cp code/friendlywrt/.config ./artifact/

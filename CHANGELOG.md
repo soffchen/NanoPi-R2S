@@ -1,3 +1,6 @@
+## 20210202
+* Make OTA Work Again
+
 ## 20210130
 * 更新 netdata
 * 修复 OpenClash 依赖问题

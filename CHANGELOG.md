@@ -1,5 +1,5 @@
 ## 20210202
-* Make OTA Work Again test
+* Make OTA Work Again
 
 ## 20210130
 * 更新 netdata

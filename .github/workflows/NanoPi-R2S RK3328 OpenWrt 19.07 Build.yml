@@ -79,7 +79,7 @@ jobs:
           svn co https://github.com/xiaorouji/openwrt-passwall/trunk/naiveproxy
           svn co https://github.com/xiaorouji/openwrt-passwall/trunk/brook
           svn co https://github.com/xiaorouji/openwrt-passwall/trunk/chinadns-ng
-          svn co https://github.com/xiaorouji/openwrt-passwall/trunk/xray
+          svn co https://github.com/xiaorouji/openwrt-passwall/trunk/xray-core
           
           svn co https://github.com/songchenwen/nanopi-r2s/trunk/luci-app-r2sflasher
           

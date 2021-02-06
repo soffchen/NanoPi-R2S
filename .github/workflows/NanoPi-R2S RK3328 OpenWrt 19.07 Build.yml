@@ -84,7 +84,7 @@ jobs:
           svn co https://github.com/songchenwen/nanopi-r2s/trunk/luci-app-r2sflasher
           
           svn co https://github.com/pymumu/smartdns/trunk/package/openwrt smartdns
-          cp -r ../../../package/luci-app-smartdns .
+          svn co https://github.com/pymumu/luci-app-smartdns/branches/lede luci-app-smartdns
           
           git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git
           git clone https://github.com/NateLol/luci-app-oled

@@ -133,11 +133,8 @@ jobs:
           
           sed -i '/upx/d' friendlywrt/package/lean/frp/Makefile
           
-          #wget -O friendlywrt/package/feeds/packages/zstd/Makefile https://raw.githubusercontent.com/coolsnowwolf/packages/89080f226affe0815c7fb8ff77f3f2d53058e9ec/utils/zstd/Makefile
           wget -O friendlywrt/package/kernel/kmod-sched-cake/Makefile https://raw.githubusercontent.com/coolsnowwolf/lede/master/package/kernel/kmod-sched-cake-oot/Makefile
           wget -O friendlywrt/feeds/packages/libs/libxml2/Makefile https://raw.githubusercontent.com/coolsnowwolf/packages/master/libs/libxml2/Makefile
-
-          #cp ../patches/31-usb_wifi friendlywrt/package/base-files/files/etc/hotplug.d/usb/31-usb_wifi
 
           sed -i "/redirect_https/d" friendlywrt/package/network/services/uhttpd/files/uhttpd.config
           sed -i '/Load Average/i\\t\t<tr><td width="33%"><%:CPU Temperature%></td><td><%=luci.sys.exec("cut -c1-2 /sys/class/thermal/thermal_zone0/temp")%><span>&#8451;</span></td></tr>' friendlywrt/feeds/luci/modules/luci-mod-admin-full/luasrc/view/admin_status/index.htm

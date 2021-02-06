@@ -5143,7 +5143,6 @@ CONFIG_PACKAGE_luci-app-vlmcsd=y
 CONFIG_PACKAGE_luci-app-vsftpd=y
 CONFIG_PACKAGE_luci-app-vssr=y
 CONFIG_PACKAGE_luci-app-vssr_INCLUDE_V2ray_plugin=y
-CONFIG_PACKAGE_luci-app-vssr_INCLUDE_V2ray=y
 CONFIG_PACKAGE_luci-app-vssr_INCLUDE_Xray=y
 CONFIG_PACKAGE_luci-app-vssr_INCLUDE_Trojan=y
 CONFIG_PACKAGE_luci-app-vssr_INCLUDE_Kcptun=y
@@ -6025,30 +6024,9 @@ CONFIG_AMULE_CRYPTOPP_STATIC_LINKING=y
 #
 # Project V
 #
-CONFIG_PACKAGE_v2ray=y
-
-#
-# V2Ray Configuration
-#
-# CONFIG_V2RAY_COMPRESS_GOPROXY is not set
-CONFIG_V2RAY_EXCLUDE_V2CTL=y
-CONFIG_V2RAY_EXCLUDE_ASSETS=y
-# CONFIG_V2RAY_COMPRESS_UPX is not set
+# CONFIG_PACKAGE_v2ray is not set
 CONFIG_PACKAGE_v2ray-plugin=y
 # CONFIG_v2ray-plugin_INCLUDE_GOPROXY is not set
-
-#
-# Project X
-#
-CONFIG_PACKAGE_xray=y
-
-#
-# Xray Configuration
-#
-# CONFIG_XRAY_COMPRESS_GOPROXY is not set
-CONFIG_XRAY_EXCLUDE_ASSETS=y
-CONFIG_XRAY_COMPRESS_UPX=y
-# CONFIG_XRAY_COMPATIBILITY_MODE is not set
 
 #
 # Routing and Redirection
@@ -6381,6 +6359,7 @@ CONFIG_PACKAGE_frpc=y
 CONFIG_PACKAGE_haproxy=y
 # CONFIG_PACKAGE_halog is not set
 # CONFIG_PACKAGE_haproxy-nossl is not set
+CONFIG_PACKAGE_ipt2socks=y
 CONFIG_PACKAGE_kcptun-client=y
 # CONFIG_PACKAGE_kcptun-server is not set
 # CONFIG_PACKAGE_lighttpd is not set
@@ -6559,7 +6538,6 @@ CONFIG_PACKAGE_iperf3=y
 # CONFIG_PACKAGE_ipip is not set
 CONFIG_PACKAGE_ipset=y
 # CONFIG_PACKAGE_ipset-dns is not set
-CONFIG_PACKAGE_ipt2socks=y
 # CONFIG_PACKAGE_iptraf-ng is not set
 # CONFIG_PACKAGE_iputils-arping is not set
 # CONFIG_PACKAGE_iputils-clockdiff is not set
@@ -6734,6 +6712,8 @@ CONFIG_PACKAGE_wpad-mini=y
 # CONFIG_PACKAGE_wpan-tools is not set
 CONFIG_PACKAGE_wwan=y
 # CONFIG_PACKAGE_xinetd is not set
+CONFIG_PACKAGE_xray-core=y
+# CONFIG_PACKAGE_xray-geodata is not set
 
 #
 # Sound

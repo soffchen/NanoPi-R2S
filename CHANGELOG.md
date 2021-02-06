@@ -1,3 +1,6 @@
+## 20210206
+* 开机挂载 Docker 资料分区
+
 ## 20210202
 * Make OTA Work Again
 
@@ -94,5 +97,3 @@
 ## 20200226
 * 添加 frpc 和 npc
 * 支持 Full Cone NAT
-
-1

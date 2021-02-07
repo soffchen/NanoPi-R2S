@@ -8,9 +8,9 @@
 * 默认管理密码: password
 
 ## 特色
-* 支持 RTL8821CU/RTL8822BU 芯片的 USB WiFi 设备，已知支持列表：
-    - [COMFAST 726B](https://u.jd.com/KmtGTP)
-    - [COMFAST CF-759BF](https://u.jd.com/AiZit7)
+* 支持 RTL8821CU/RTL8822BU/RTL8812AU 芯片的 USB WiFi 设备，已知支持列表：
+    - [COMFAST 726B](https://u.jd.com/ISyZWQh)
+    - [COMFAST CF-759BF](https://u.jd.com/IRyZhYG)
 * 集成 [OpenClash](https://github.com/vernesong/OpenClash) 及其 core/tun/game binaries
 * 集成 [HelloWorld](https://github.com/jerrykuku/luci-app-vssr)
 * 集成 [Passwall](https://github.com/xiaorouji/openwrt-passwall)

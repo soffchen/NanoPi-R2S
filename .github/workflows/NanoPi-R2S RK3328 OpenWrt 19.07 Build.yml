@@ -142,7 +142,7 @@ jobs:
           sed -i 's/services/vpn/g' friendlywrt/package/feeds/luci/luci-app-openvpn/luasrc/controller/openvpn.lua
           sed -i 's/resolv.conf.d\/resolv.conf.auto/resolv.conf.auto/g' friendlywrt/package/lean/luci-app-flowoffload/root/etc/init.d/flowoffload
           
-          sed -i '/done/imkfs.ext4 \/dev\/mmcblk0p2 && mkdir \/mnt\/mmcblk0p2 && mount \/dev\/mmcblk0p2 \/mnt\/mmcblk0p2 && mount \/dev\/mmcblk0p2 \/opt\n' ./friendlywrt/package/base-files/files/root/setup.sh
+          sed -i '/done/imkfs.ext4 \/dev\/mmcblk0p2 && mkdir \/mnt\/mmcblk0p2 && mount \/dev\/mmcblk0p2 \/mnt\/mmcblk0p2 && mount \/dev\/mmcblk0p2 \/opt && mkdir \/opt\/docker\n' ./friendlywrt/package/base-files/files/root/setup.sh
           sed -i 's/\/root/\/mnt\/mmcblk0p2/g' ./friendlywrt/package/luci-app-r2sflasher/root/usr/bin/rom_flash
 
       - name: Patch Kernel

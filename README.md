@@ -8,9 +8,10 @@
 * 默认管理密码: password
 
 ## 特色
-* 支持 RTL8821CU/RTL8822BU 芯片的 USB WiFi 设备，已知支持列表：
-    - [COMFAST 726B](https://u.jd.com/KmtGTP)
-    - [COMFAST CF-759BF](https://u.jd.com/AiZit7)
+* 支持 RTL8821CU/RTL8822BU/RTL8812AU 芯片的 USB WiFi 设备，已知支持列表：
+    - [COMFAST 726B](https://u.jd.com/ISyZWQh)
+    - [COMFAST CF-759BF](https://u.jd.com/IRyZhYG)
+    - [COMFAST CF-927BF](https://u.jd.com/I2yv0kA)
 * 集成 [OpenClash](https://github.com/vernesong/OpenClash) 及其 core/tun/game binaries
 * 集成 [HelloWorld](https://github.com/jerrykuku/luci-app-vssr)
 * 集成 [Passwall](https://github.com/xiaorouji/openwrt-passwall)
@@ -21,6 +22,7 @@
 * 集成 [Smartdns](https://github.com/pymumu/smartdns) 与 luci-app-smartdns
 * 集成 [luci-app-oled](https://github.com/NateLol/luci-app-oled)
 * 集成 [luci-app-jd-dailybonus](https://github.com/jerrykuku/luci-app-jd-dailybonus)
+* 集成 [luci-app-dockerman](https://github.com/lisaac/luci-app-dockerman)
 
 ## 用法
 Fork 到自己的账号下，将 `.github/workflows` 下 `.yml` 文件中的 `runs-on: self-hosted` 改成 `runs-on: ubuntu-latest`（因为我是自己的服务器上编译，更快），编辑文件 `CHANGELOG.md` 触发编译动作。

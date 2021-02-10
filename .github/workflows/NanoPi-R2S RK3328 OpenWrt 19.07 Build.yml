@@ -145,8 +145,11 @@ jobs:
           sed -i 's/services/vpn/g' package/feeds/luci/luci-app-openvpn/luasrc/controller/openvpn.lua
           sed -i 's/resolv.conf.d\/resolv.conf.auto/resolv.conf.auto/g' package/lean/luci-app-flowoffload/root/etc/init.d/flowoffload
           
-          sed -i '/done/imkfs.ext4 \/dev\/mmcblk0p2 && mkdir \/mnt\/mmcblk0p2 && mount \/dev\/mmcblk0p2 \/mnt\/mmcblk0p2 && mount \/dev\/mmcblk0p2 \/opt && mkdir \/opt\/docker\n' package/base-files/files/root/setup.sh
-          sed -i '/done/i[ -f \/etc\/init.d\/dockerd ] && \/etc\/init.d\/dockerd restart\n' package/base-files/files/root/setup.sh
+          sed -i '/done/imkfs.ext4 /dev/mmcblk0p2 && mkdir /mnt/mmcblk0p2 && mount /dev/mmcblk0p2 /mnt/mmcblk0p2 && mkdir /mnt/mmcblk0p2/docker\n' package/base-files/files/root/setup.sh
+          sed -i "/done/iblock detect | sed \"s/enabled\\\t'0'/enabled\\\t'1'/\" > /etc/config/fstab\n" package/base-files/files/root/setup.sh
+          sed -i '/done/i[ -f /etc/init.d/dockerman ] && /etc/init.d/dockerman restart\n' package/base-files/files/root/setup.sh
+
+          sed -i 's/\/opt\/docker/\/mnt\/mmcblk0p2\/docker/g' package/luci-app-dockerman/root/etc/config/dockerman
           sed -i 's/\/root/\/mnt\/mmcblk0p2/g' package/luci-app-r2sflasher/root/usr/bin/rom_flash
 
       - name: Patch Kernel

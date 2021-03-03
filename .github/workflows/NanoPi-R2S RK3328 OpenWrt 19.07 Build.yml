@@ -136,6 +136,7 @@ jobs:
           
           sed -i '/upx/d' package/lean/frp/Makefile
           sed -i '/upx/d' package/lean/UnblockNeteaseMusicGo/Makefile
+          sed -i '/upx/d' package/trojan-go/Makefile
           
           wget -O package/kernel/kmod-sched-cake/Makefile https://raw.githubusercontent.com/coolsnowwolf/lede/master/package/kernel/kmod-sched-cake-oot/Makefile
           wget -O feeds/packages/libs/libxml2/Makefile https://raw.githubusercontent.com/coolsnowwolf/packages/master/libs/libxml2/Makefile

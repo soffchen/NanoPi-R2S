@@ -179,28 +179,12 @@ jobs:
           sed -i 's/set -eu/set -u/' scripts/mk-friendlywrt.sh
           ./build.sh nanopi_r2s.mk
 
-      - name: Fix Rootfs Owner and Group
-        run: |
-          sudo df -lh
-          lodev=$(sudo losetup -f)
-          echo "found unused loop dev $lodev"
-          sudo losetup -o 100663296 $lodev code/out/*.img
-          sudo rm -rf /mnt/friendlywrt-tmp
-          sudo mkdir -p /mnt/friendlywrt-tmp
-          sudo mount $lodev /mnt/friendlywrt-tmp
-          sudo chown -R root:root /mnt/friendlywrt-tmp
-          sudo umount /mnt/friendlywrt-tmp
-          sudo losetup -d $lodev
-
       - name: Assemble Artifact
         run: |
           rm -rf ./artifact/
           mkdir -p ./artifact/
 
-          #find code/out/ -name "FriendlyWrt_*img" | xargs -I{} sh -c 'f=$(basename $1); zip -r -j "./artifact/${f}.zip" $1' sh {} \;
           cp code/out/*.img.zip ./artifact/
-          #find code/friendlywrt/bin/targets/rockchip-rk3328/generic -name "openwrt*-squashfs.img" | xargs -I{} sh -c 'f=$(basename $1); zip -r -j "./artifact/${f}.zip" $1' sh {} \;
-          
           cp code/friendlywrt/.config ./artifact/
 
       - name: Upload Artifact

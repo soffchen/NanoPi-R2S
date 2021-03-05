@@ -44,6 +44,7 @@ jobs:
           mkdir code
           cd code
           repo init -u https://github.com/friendlyarm/friendlywrt_manifests -b master-v19.07.5 -m rk3328.xml --repo-url=https://github.com/friendlyarm/repo --no-clone-bundle
+          cp ../rk3328.xml ../code/.repo/manifests/rk3328.xml
           repo sync -c --no-clone-bundle -j8
 
       - name: Merge LEDE
@@ -185,7 +186,7 @@ jobs:
           lodev=$(sudo losetup -f)
           echo "found unused loop dev $lodev"
           sudo losetup -o 100663296 $lodev code/out/*.img
-          sudo mkfs -t ext4 $lodev
+          #sudo mkfs -t ext4 $lodev
           sudo rm -rf /mnt/friendlywrt-tmp
           sudo mkdir -p /mnt/friendlywrt-tmp
           sudo mount $lodev /mnt/friendlywrt-tmp

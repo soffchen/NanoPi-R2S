@@ -5004,7 +5004,7 @@ CONFIG_PACKAGE_luci-app-adguardhome=y
 # CONFIG_PACKAGE_luci-app-amule is not set
 CONFIG_PACKAGE_luci-app-aria2=y
 CONFIG_PACKAGE_luci-app-arpbind=y
-# CONFIG_PACKAGE_luci-app-asterisk is not set
+CONFIG_PACKAGE_luci-app-asterisk=y
 # CONFIG_PACKAGE_luci-app-attendedsysupgrade is not set
 CONFIG_PACKAGE_luci-app-autoreboot=y
 # CONFIG_PACKAGE_luci-app-baidupcs-web is not set
@@ -6149,7 +6149,7 @@ CONFIG_PACKAGE_openssh-keygen=y
 #
 # Telephony
 #
-# CONFIG_PACKAGE_asterisk16 is not set
+CONFIG_PACKAGE_asterisk16=y
 # CONFIG_PACKAGE_baresip is not set
 # CONFIG_PACKAGE_freeswitch-stable is not set
 # CONFIG_PACKAGE_kamailio5 is not set

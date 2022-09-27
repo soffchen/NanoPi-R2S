@@ -70,8 +70,7 @@ jobs:
           rm -rf lean/luci-theme-argon
           git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git
 
-          svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash
-          
+
           svn co https://github.com/xiaorouji/openwrt-passwall/trunk/luci-app-passwall
           svn co https://github.com/xiaorouji/openwrt-passwall/trunk/tcping
           svn co https://github.com/xiaorouji/openwrt-passwall/trunk/ssocks
@@ -82,17 +81,12 @@ jobs:
           svn co https://github.com/xiaorouji/openwrt-passwall/trunk/chinadns-ng
           svn co https://github.com/xiaorouji/openwrt-passwall/trunk/xray-core
           svn co https://github.com/xiaorouji/openwrt-passwall/trunk/xray-plugin
-          
+
           svn co https://github.com/songchenwen/nanopi-r2s/trunk/luci-app-r2sflasher
-          
+
           svn co https://github.com/pymumu/smartdns/trunk/package/openwrt smartdns
           svn co https://github.com/pymumu/luci-app-smartdns/branches/lede luci-app-smartdns
-          
-          svn co https://github.com/lisaac/luci-app-dockerman/trunk/applications/luci-app-dockerman
-          
-          git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git
-          git clone https://github.com/NateLol/luci-app-oled
-        
+
       - name: Install Clash Binaries
         run: |
           cd code/friendlywrt/package/base-files/files

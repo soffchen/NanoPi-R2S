@@ -64,24 +64,29 @@ jobs:
 
           git clone https://github.com/rufengsuixing/luci-app-adguardhome
 
-          git clone https://github.com/jerrykuku/lua-maxminddb.git
-          git clone https://github.com/jerrykuku/luci-app-vssr.git
+          git clone https://github.com/songchenwen/openwrt-package
+          git clone https://github.com/x-wrt/com.x-wrt
 
           rm -rf lean/luci-theme-argon
           git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git
 
 
-          svn co https://github.com/xiaorouji/openwrt-passwall/trunk/luci-app-passwall
-          svn co https://github.com/xiaorouji/openwrt-passwall/trunk/tcping
-          svn co https://github.com/xiaorouji/openwrt-passwall/trunk/ssocks
-          svn co https://github.com/xiaorouji/openwrt-passwall/trunk/trojan-plus
-          svn co https://github.com/xiaorouji/openwrt-passwall/trunk/trojan-go
-          svn co https://github.com/xiaorouji/openwrt-passwall/trunk/naiveproxy
-          svn co https://github.com/xiaorouji/openwrt-passwall/trunk/brook
-          svn co https://github.com/xiaorouji/openwrt-passwall/trunk/chinadns-ng
-          svn co https://github.com/xiaorouji/openwrt-passwall/trunk/xray-core
-          svn co https://github.com/xiaorouji/openwrt-passwall/trunk/xray-plugin
-
+          svn co https://github.com/songchenwen/openwrt-package/tree/master/lienol/trunk/luci-app-passwall
+          svn co https://github.com/songchenwen/openwrt-package/tree/master/package/trunk/book
+          svn co https://github.com/songchenwen/openwrt-package/tree/master/package/trunk/chinadns-ng
+          svn co https://github.com/songchenwen/openwrt-package/tree/master/package/trunk/dns2socks
+          svn co https://github.com/songchenwen/openwrt-package/tree/master/package/trunk/ipt2socks
+          svn co https://github.com/songchenwen/openwrt-package/tree/master/package/trunk/kcptun
+          svn co https://github.com/songchenwen/openwrt-package/tree/master/package/trunk/openssl1.1
+          svn co https://github.com/songchenwen/openwrt-package/tree/master/package/trunk/pdnsd-alt
+          svn co https://github.com/songchenwen/openwrt-package/tree/master/package/trunk/shadowsocksr-libev
+          svn co https://github.com/songchenwen/openwrt-package/tree/master/package/trunk/simple-obfs
+          svn co https://github.com/songchenwen/openwrt-package/tree/master/package/trunk/syncthing
+          svn co https://github.com/songchenwen/openwrt-package/tree/master/package/trunk/tcping
+          svn co https://github.com/songchenwen/openwrt-package/tree/master/package/trunk/trojan
+          svn co https://github.com/songchenwen/openwrt-package/tree/master/package/trunk/v2ray-plugin
+          svn co https://github.com/songchenwen/openwrt-package/tree/master/package/trunk/v2ray
+          svn co https://github.com/songchenwen/openwrt-package/tree/master/package/trunk/verysync
           svn co https://github.com/songchenwen/nanopi-r2s/trunk/luci-app-r2sflasher
 
           svn co https://github.com/pymumu/smartdns/trunk/package/openwrt smartdns

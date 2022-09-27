@@ -1,4 +1,4 @@
-name: NanoPi-R2S RK3328 OpenWrt 19.07 Build
+name: NanoPi-R2S RK3328 OpenWrt 19.07
 
 on:
   push:
